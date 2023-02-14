@@ -1,0 +1,9 @@
+Progress:
+1. Done basic frequency response for testing
+2. Agreement on 
+
+
+TO-DO:
+1. Come up specific frequency response test case by the impact of compression. Check frequency response from STFT. 
+2. Design algorithm for noise measurement
+3. Create dumb function for convolution in embedded part. Set unit impulse for the signal and do convolution, see if there is any error (the output is supposed to be the original input signal).
