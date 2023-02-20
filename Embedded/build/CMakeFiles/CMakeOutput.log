@@ -1,0 +1,982 @@
+The target system is: Generic - 3.2.99 - arm
+The host system is: Windows - 10.0.22621 - AMD64
+Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+Compiler: C:/ncs/toolchains/v2.2.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc.exe 
+Build flags: 
+Id flags: -c 
+
+The output was:
+0
+
+
+Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CMakeCCompilerId.o"
+
+The C compiler identification is GNU, found in "C:/ncs/v2.2.0/nrf/applications/nrf5340_audio/build/CMakeFiles/3.20.5/CompilerIdC/CMakeCCompilerId.o"
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+Compiler: C:/ncs/toolchains/v2.2.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc.exe 
+Build flags: 
+Id flags: -c 
+
+The output was:
+0
+
+
+Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CMakeCXXCompilerId.o"
+
+The CXX compiler identification is GNU, found in "C:/ncs/v2.2.0/nrf/applications/nrf5340_audio/build/CMakeFiles/3.20.5/CompilerIdCXX/CMakeCXXCompilerId.o"
+
+Checking whether the ASM compiler is GNU using "--version" matched "(GNU assembler)|(GCC)|(Free Software Foundation)":
+arm-zephyr-eabi-gcc.exe (Zephyr SDK 0.15.1) 12.1.0
+Copyright (C) 2022 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+Determining if files stdatomic.h exist passed with the following output:
+Change Dir: C:/ncs/v2.2.0/nrf/applications/nrf5340_audio/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/ncs/toolchains/v2.2.0/opt/bin/ninja.exe cmTC_546d2 && [1/2] Building C object CMakeFiles/cmTC_546d2.dir/HAVE_STDATOMIC_H.c.obj
+[2/2] Linking C executable cmTC_546d2
+arm-zephyr-eabi-gcc.exe: warning: CMakeFiles/cmTC_546d2.dir/HAVE_STDATOMIC_H.c.obj: linker input file unused because linking not done
+
+
+
+Determining if files fcntl.h exist passed with the following output:
+Change Dir: C:/ncs/v2.2.0/nrf/applications/nrf5340_audio/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/ncs/toolchains/v2.2.0/opt/bin/ninja.exe cmTC_ebe65 && [1/2] Building C object CMakeFiles/cmTC_ebe65.dir/HAVE_FCNTL_H.c.obj
+[2/2] Linking C executable cmTC_ebe65
+arm-zephyr-eabi-gcc.exe: warning: CMakeFiles/cmTC_ebe65.dir/HAVE_FCNTL_H.c.obj: linker input file unused because linking not done
+
+
+
+The target system is: Generic - 3.2.99 - arm
+The host system is: Windows - 10.0.22621 - AMD64
+Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+Compiler: C:/ncs/toolchains/v2.2.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc.exe 
+Build flags: 
+Id flags: -c 
+
+The output was:
+0
+
+
+Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CMakeCCompilerId.o"
+
+The C compiler identification is GNU, found in "C:/ncs/v2.2.0/nrf/applications/nrf5340_audio/build/CMakeFiles/3.20.5/CompilerIdC/CMakeCCompilerId.o"
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+Compiler: C:/ncs/toolchains/v2.2.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc.exe 
+Build flags: 
+Id flags: -c 
+
+The output was:
+0
+
+
+Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CMakeCXXCompilerId.o"
+
+The CXX compiler identification is GNU, found in "C:/ncs/v2.2.0/nrf/applications/nrf5340_audio/build/CMakeFiles/3.20.5/CompilerIdCXX/CMakeCXXCompilerId.o"
+
+Checking whether the ASM compiler is GNU using "--version" matched "(GNU assembler)|(GCC)|(Free Software Foundation)":
+arm-zephyr-eabi-gcc.exe (Zephyr SDK 0.15.1) 12.1.0
+Copyright (C) 2022 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+Determining if files stdatomic.h exist passed with the following output:
+Change Dir: C:/ncs/v2.2.0/nrf/applications/nrf5340_audio/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/ncs/toolchains/v2.2.0/opt/bin/ninja.exe cmTC_73765 && [1/2] Building C object CMakeFiles/cmTC_73765.dir/HAVE_STDATOMIC_H.c.obj
+[2/2] Linking C executable cmTC_73765
+arm-zephyr-eabi-gcc.exe: warning: CMakeFiles/cmTC_73765.dir/HAVE_STDATOMIC_H.c.obj: linker input file unused because linking not done
+
+
+
+Determining if files fcntl.h exist passed with the following output:
+Change Dir: C:/ncs/v2.2.0/nrf/applications/nrf5340_audio/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/ncs/toolchains/v2.2.0/opt/bin/ninja.exe cmTC_3107e && [1/2] Building C object CMakeFiles/cmTC_3107e.dir/HAVE_FCNTL_H.c.obj
+[2/2] Linking C executable cmTC_3107e
+arm-zephyr-eabi-gcc.exe: warning: CMakeFiles/cmTC_3107e.dir/HAVE_FCNTL_H.c.obj: linker input file unused because linking not done
+
+
+
+The target system is: Generic - 3.2.99 - arm
+The host system is: Windows - 10.0.22621 - AMD64
+Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+Compiler: C:/ncs/toolchains/v2.2.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc.exe 
+Build flags: 
+Id flags: -c 
+
+The output was:
+0
+
+
+Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CMakeCCompilerId.o"
+
+The C compiler identification is GNU, found in "C:/ncs/v2.2.0/nrf/applications/nrf5340_audio/build/CMakeFiles/3.20.5/CompilerIdC/CMakeCCompilerId.o"
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+Compiler: C:/ncs/toolchains/v2.2.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc.exe 
+Build flags: 
+Id flags: -c 
+
+The output was:
+0
+
+
+Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CMakeCXXCompilerId.o"
+
+The CXX compiler identification is GNU, found in "C:/ncs/v2.2.0/nrf/applications/nrf5340_audio/build/CMakeFiles/3.20.5/CompilerIdCXX/CMakeCXXCompilerId.o"
+
+Checking whether the ASM compiler is GNU using "--version" matched "(GNU assembler)|(GCC)|(Free Software Foundation)":
+arm-zephyr-eabi-gcc.exe (Zephyr SDK 0.15.1) 12.1.0
+Copyright (C) 2022 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+Determining if files stdatomic.h exist passed with the following output:
+Change Dir: C:/ncs/v2.2.0/nrf/applications/nrf5340_audio/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/ncs/toolchains/v2.2.0/opt/bin/ninja.exe cmTC_edefd && [1/2] Building C object CMakeFiles/cmTC_edefd.dir/HAVE_STDATOMIC_H.c.obj
+[2/2] Linking C executable cmTC_edefd
+arm-zephyr-eabi-gcc.exe: warning: CMakeFiles/cmTC_edefd.dir/HAVE_STDATOMIC_H.c.obj: linker input file unused because linking not done
+
+
+
+Determining if files fcntl.h exist passed with the following output:
+Change Dir: C:/ncs/v2.2.0/nrf/applications/nrf5340_audio/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/ncs/toolchains/v2.2.0/opt/bin/ninja.exe cmTC_7f8d8 && [1/2] Building C object CMakeFiles/cmTC_7f8d8.dir/HAVE_FCNTL_H.c.obj
+[2/2] Linking C executable cmTC_7f8d8
+arm-zephyr-eabi-gcc.exe: warning: CMakeFiles/cmTC_7f8d8.dir/HAVE_FCNTL_H.c.obj: linker input file unused because linking not done
+
+
+
+Performing C SOURCE FILE Test check_C__c__nostartfiles__nostdlib__isystem__c__ncs_toolchains_v2_2_0_opt_zephyr_sdk_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_1_0_include___isystem__c__ncs_toolchains_v2_2_0_opt_zephyr_sdk_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_1_0_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl___entry_0 succeeded with the following output:
+Change Dir: C:/ncs/v2.2.0/nrf/applications/nrf5340_audio/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/ncs/toolchains/v2.2.0/opt/bin/ninja.exe cmTC_cc715 && [1/2] Building C object CMakeFiles/cmTC_cc715.dir/src.c.obj
+[2/2] Linking C executable cmTC_cc715
+arm-zephyr-eabi-gcc.exe: warning: CMakeFiles/cmTC_cc715.dir/src.c.obj: linker input file unused because linking not done
+
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test check_C__c__nostartfiles__nostdlib__isystem__c__ncs_toolchains_v2_2_0_opt_zephyr_sdk_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_1_0_include___isystem__c__ncs_toolchains_v2_2_0_opt_zephyr_sdk_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_1_0_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl___entry_0_ succeeded with the following output:
+Change Dir: C:/ncs/v2.2.0/nrf/applications/nrf5340_audio/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/ncs/toolchains/v2.2.0/opt/bin/ninja.exe cmTC_2932f && [1/2] Building C object CMakeFiles/cmTC_2932f.dir/src.c.obj
+[2/2] Linking C executable cmTC_2932f
+arm-zephyr-eabi-gcc.exe: warning: CMakeFiles/cmTC_2932f.dir/src.c.obj: linker input file unused because linking not done
+
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test check_Wall_C__c__nostartfiles__nostdlib__isystem__c__ncs_toolchains_v2_2_0_opt_zephyr_sdk_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_1_0_include___isystem__c__ncs_toolchains_v2_2_0_opt_zephyr_sdk_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_1_0_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl___entry_0 succeeded with the following output:
+Change Dir: C:/ncs/v2.2.0/nrf/applications/nrf5340_audio/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/ncs/toolchains/v2.2.0/opt/bin/ninja.exe cmTC_0ccea && [1/2] Building C object CMakeFiles/cmTC_0ccea.dir/src.c.obj
+[2/2] Linking C executable cmTC_0ccea
+arm-zephyr-eabi-gcc.exe: warning: CMakeFiles/cmTC_0ccea.dir/src.c.obj: linker input file unused because linking not done
+
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test check_Wformat__Wformat_security_C__c__nostartfiles__nostdlib__isystem__c__ncs_toolchains_v2_2_0_opt_zephyr_sdk_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_1_0_include___isystem__c__ncs_toolchains_v2_2_0_opt_zephyr_sdk_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_1_0_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl___entry_0 succeeded with the following output:
+Change Dir: C:/ncs/v2.2.0/nrf/applications/nrf5340_audio/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/ncs/toolchains/v2.2.0/opt/bin/ninja.exe cmTC_3f893 && [1/2] Building C object CMakeFiles/cmTC_3f893.dir/src.c.obj
+[2/2] Linking C executable cmTC_3f893
+arm-zephyr-eabi-gcc.exe: warning: CMakeFiles/cmTC_3f893.dir/src.c.obj: linker input file unused because linking not done
+
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test check_Wformat__Wformat_zero_length_C__c__nostartfiles__nostdlib__isystem__c__ncs_toolchains_v2_2_0_opt_zephyr_sdk_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_1_0_include___isystem__c__ncs_toolchains_v2_2_0_opt_zephyr_sdk_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_1_0_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl___entry_0 succeeded with the following output:
+Change Dir: C:/ncs/v2.2.0/nrf/applications/nrf5340_audio/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/ncs/toolchains/v2.2.0/opt/bin/ninja.exe cmTC_01f43 && [1/2] Building C object CMakeFiles/cmTC_01f43.dir/src.c.obj
+[2/2] Linking C executable cmTC_01f43
+arm-zephyr-eabi-gcc.exe: warning: CMakeFiles/cmTC_01f43.dir/src.c.obj: linker input file unused because linking not done
+
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test check_Wmain_C__c__nostartfiles__nostdlib__isystem__c__ncs_toolchains_v2_2_0_opt_zephyr_sdk_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_1_0_include___isystem__c__ncs_toolchains_v2_2_0_opt_zephyr_sdk_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_1_0_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl___entry_0 succeeded with the following output:
+Change Dir: C:/ncs/v2.2.0/nrf/applications/nrf5340_audio/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/ncs/toolchains/v2.2.0/opt/bin/ninja.exe cmTC_95e15 && [1/2] Building C object CMakeFiles/cmTC_95e15.dir/src.c.obj
+[2/2] Linking C executable cmTC_95e15
+arm-zephyr-eabi-gcc.exe: warning: CMakeFiles/cmTC_95e15.dir/src.c.obj: linker input file unused because linking not done
+
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test check_Wpointer_sign_C__c__nostartfiles__nostdlib__isystem__c__ncs_toolchains_v2_2_0_opt_zephyr_sdk_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_1_0_include___isystem__c__ncs_toolchains_v2_2_0_opt_zephyr_sdk_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_1_0_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl___entry_0 succeeded with the following output:
+Change Dir: C:/ncs/v2.2.0/nrf/applications/nrf5340_audio/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/ncs/toolchains/v2.2.0/opt/bin/ninja.exe cmTC_75d7e && [1/2] Building C object CMakeFiles/cmTC_75d7e.dir/src.c.obj
+[2/2] Linking C executable cmTC_75d7e
+arm-zephyr-eabi-gcc.exe: warning: CMakeFiles/cmTC_75d7e.dir/src.c.obj: linker input file unused because linking not done
+
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test check_Wpointer_arith_C__c__nostartfiles__nostdlib__isystem__c__ncs_toolchains_v2_2_0_opt_zephyr_sdk_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_1_0_include___isystem__c__ncs_toolchains_v2_2_0_opt_zephyr_sdk_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_1_0_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl___entry_0 succeeded with the following output:
+Change Dir: C:/ncs/v2.2.0/nrf/applications/nrf5340_audio/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/ncs/toolchains/v2.2.0/opt/bin/ninja.exe cmTC_0fc97 && [1/2] Building C object CMakeFiles/cmTC_0fc97.dir/src.c.obj
+[2/2] Linking C executable cmTC_0fc97
+arm-zephyr-eabi-gcc.exe: warning: CMakeFiles/cmTC_0fc97.dir/src.c.obj: linker input file unused because linking not done
+
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test check_Wexpansion_to_defined_C__c__nostartfiles__nostdlib__isystem__c__ncs_toolchains_v2_2_0_opt_zephyr_sdk_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_1_0_include___isystem__c__ncs_toolchains_v2_2_0_opt_zephyr_sdk_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_1_0_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl___entry_0 succeeded with the following output:
+Change Dir: C:/ncs/v2.2.0/nrf/applications/nrf5340_audio/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/ncs/toolchains/v2.2.0/opt/bin/ninja.exe cmTC_9c9d0 && [1/2] Building C object CMakeFiles/cmTC_9c9d0.dir/src.c.obj
+[2/2] Linking C executable cmTC_9c9d0
+arm-zephyr-eabi-gcc.exe: warning: CMakeFiles/cmTC_9c9d0.dir/src.c.obj: linker input file unused because linking not done
+
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test check_Wlogical_op_C__c__nostartfiles__nostdlib__isystem__c__ncs_toolchains_v2_2_0_opt_zephyr_sdk_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_1_0_include___isystem__c__ncs_toolchains_v2_2_0_opt_zephyr_sdk_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_1_0_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl___entry_0 succeeded with the following output:
+Change Dir: C:/ncs/v2.2.0/nrf/applications/nrf5340_audio/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/ncs/toolchains/v2.2.0/opt/bin/ninja.exe cmTC_bf3cc && [1/2] Building C object CMakeFiles/cmTC_bf3cc.dir/src.c.obj
+[2/2] Linking C executable cmTC_bf3cc
+arm-zephyr-eabi-gcc.exe: warning: CMakeFiles/cmTC_bf3cc.dir/src.c.obj: linker input file unused because linking not done
+
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test check_Wmissing_field_initializers_C__c__nostartfiles__nostdlib__isystem__c__ncs_toolchains_v2_2_0_opt_zephyr_sdk_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_1_0_include___isystem__c__ncs_toolchains_v2_2_0_opt_zephyr_sdk_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_1_0_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl___entry_0 succeeded with the following output:
+Change Dir: C:/ncs/v2.2.0/nrf/applications/nrf5340_audio/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/ncs/toolchains/v2.2.0/opt/bin/ninja.exe cmTC_3c356 && [1/2] Building C object CMakeFiles/cmTC_3c356.dir/src.c.obj
+[2/2] Linking C executable cmTC_3c356
+arm-zephyr-eabi-gcc.exe: warning: CMakeFiles/cmTC_3c356.dir/src.c.obj: linker input file unused because linking not done
+
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test check_Wpacked_bitfield_compat_C__c__nostartfiles__nostdlib__isystem__c__ncs_toolchains_v2_2_0_opt_zephyr_sdk_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_1_0_include___isystem__c__ncs_toolchains_v2_2_0_opt_zephyr_sdk_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_1_0_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl___entry_0 succeeded with the following output:
+Change Dir: C:/ncs/v2.2.0/nrf/applications/nrf5340_audio/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/ncs/toolchains/v2.2.0/opt/bin/ninja.exe cmTC_c98b7 && [1/2] Building C object CMakeFiles/cmTC_c98b7.dir/src.c.obj
+[2/2] Linking C executable cmTC_c98b7
+arm-zephyr-eabi-gcc.exe: warning: CMakeFiles/cmTC_c98b7.dir/src.c.obj: linker input file unused because linking not done
+
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test check_Wvla_C__c__nostartfiles__nostdlib__isystem__c__ncs_toolchains_v2_2_0_opt_zephyr_sdk_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_1_0_include___isystem__c__ncs_toolchains_v2_2_0_opt_zephyr_sdk_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_1_0_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl___entry_0 succeeded with the following output:
+Change Dir: C:/ncs/v2.2.0/nrf/applications/nrf5340_audio/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/ncs/toolchains/v2.2.0/opt/bin/ninja.exe cmTC_cf16f && [1/2] Building C object CMakeFiles/cmTC_cf16f.dir/src.c.obj
+[2/2] Linking C executable cmTC_cf16f
+arm-zephyr-eabi-gcc.exe: warning: CMakeFiles/cmTC_cf16f.dir/src.c.obj: linker input file unused because linking not done
+
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test check_Wunused_but_set_variable_C__c__nostartfiles__nostdlib__isystem__c__ncs_toolchains_v2_2_0_opt_zephyr_sdk_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_1_0_include___isystem__c__ncs_toolchains_v2_2_0_opt_zephyr_sdk_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_1_0_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl___entry_0 succeeded with the following output:
+Change Dir: C:/ncs/v2.2.0/nrf/applications/nrf5340_audio/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/ncs/toolchains/v2.2.0/opt/bin/ninja.exe cmTC_55b71 && [1/2] Building C object CMakeFiles/cmTC_55b71.dir/src.c.obj
+[2/2] Linking C executable cmTC_55b71
+arm-zephyr-eabi-gcc.exe: warning: CMakeFiles/cmTC_55b71.dir/src.c.obj: linker input file unused because linking not done
+
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test check_Werror_implicit_int_C__c__nostartfiles__nostdlib__isystem__c__ncs_toolchains_v2_2_0_opt_zephyr_sdk_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_1_0_include___isystem__c__ncs_toolchains_v2_2_0_opt_zephyr_sdk_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_1_0_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl___entry_0 succeeded with the following output:
+Change Dir: C:/ncs/v2.2.0/nrf/applications/nrf5340_audio/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/ncs/toolchains/v2.2.0/opt/bin/ninja.exe cmTC_ee4cd && [1/2] Building C object CMakeFiles/cmTC_ee4cd.dir/src.c.obj
+[2/2] Linking C executable cmTC_ee4cd
+arm-zephyr-eabi-gcc.exe: warning: CMakeFiles/cmTC_ee4cd.dir/src.c.obj: linker input file unused because linking not done
+
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test check_mstack_protector_guard_global_C__c__nostartfiles__nostdlib__isystem__c__ncs_toolchains_v2_2_0_opt_zephyr_sdk_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_1_0_include___isystem__c__ncs_toolchains_v2_2_0_opt_zephyr_sdk_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_1_0_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl___entry_0 succeeded with the following output:
+Change Dir: C:/ncs/v2.2.0/nrf/applications/nrf5340_audio/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/ncs/toolchains/v2.2.0/opt/bin/ninja.exe cmTC_ab6f3 && [1/2] Building C object CMakeFiles/cmTC_ab6f3.dir/src.c.obj
+[2/2] Linking C executable cmTC_ab6f3
+arm-zephyr-eabi-gcc.exe: warning: CMakeFiles/cmTC_ab6f3.dir/src.c.obj: linker input file unused because linking not done
+
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test check_fno_freestanding_C__c__nostartfiles__nostdlib__isystem__c__ncs_toolchains_v2_2_0_opt_zephyr_sdk_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_1_0_include___isystem__c__ncs_toolchains_v2_2_0_opt_zephyr_sdk_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_1_0_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl___entry_0 succeeded with the following output:
+Change Dir: C:/ncs/v2.2.0/nrf/applications/nrf5340_audio/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/ncs/toolchains/v2.2.0/opt/bin/ninja.exe cmTC_06b00 && [1/2] Building C object CMakeFiles/cmTC_06b00.dir/src.c.obj
+[2/2] Linking C executable cmTC_06b00
+arm-zephyr-eabi-gcc.exe: warning: CMakeFiles/cmTC_06b00.dir/src.c.obj: linker input file unused because linking not done
+
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test check_ffreestanding_C__c__nostartfiles__nostdlib__isystem__c__ncs_toolchains_v2_2_0_opt_zephyr_sdk_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_1_0_include___isystem__c__ncs_toolchains_v2_2_0_opt_zephyr_sdk_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_1_0_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl___entry_0 succeeded with the following output:
+Change Dir: C:/ncs/v2.2.0/nrf/applications/nrf5340_audio/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/ncs/toolchains/v2.2.0/opt/bin/ninja.exe cmTC_4934e && [1/2] Building C object CMakeFiles/cmTC_4934e.dir/src.c.obj
+[2/2] Linking C executable cmTC_4934e
+arm-zephyr-eabi-gcc.exe: warning: CMakeFiles/cmTC_4934e.dir/src.c.obj: linker input file unused because linking not done
+
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test check_gdwarf_4_C__c__nostartfiles__nostdlib__isystem__c__ncs_toolchains_v2_2_0_opt_zephyr_sdk_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_1_0_include___isystem__c__ncs_toolchains_v2_2_0_opt_zephyr_sdk_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_1_0_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl___entry_0 succeeded with the following output:
+Change Dir: C:/ncs/v2.2.0/nrf/applications/nrf5340_audio/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/ncs/toolchains/v2.2.0/opt/bin/ninja.exe cmTC_a494d && [1/2] Building C object CMakeFiles/cmTC_a494d.dir/src.c.obj
+[2/2] Linking C executable cmTC_a494d
+arm-zephyr-eabi-gcc.exe: warning: CMakeFiles/cmTC_a494d.dir/src.c.obj: linker input file unused because linking not done
+
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test check_C__c__nostartfiles__nostdlib__isystem__c__ncs_toolchains_v2_2_0_opt_zephyr_sdk_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_1_0_include___isystem__c__ncs_toolchains_v2_2_0_opt_zephyr_sdk_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_1_0_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl___entry_0__Wl___print_memory_usage succeeded with the following output:
+Change Dir: C:/ncs/v2.2.0/nrf/applications/nrf5340_audio/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/ncs/toolchains/v2.2.0/opt/bin/ninja.exe cmTC_39dc5 && [1/2] Building C object CMakeFiles/cmTC_39dc5.dir/src.c.obj
+[2/2] Linking C executable cmTC_39dc5
+arm-zephyr-eabi-gcc.exe: warning: CMakeFiles/cmTC_39dc5.dir/src.c.obj: linker input file unused because linking not done
+
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test check_C__c__nostartfiles__nostdlib__isystem__c__ncs_toolchains_v2_2_0_opt_zephyr_sdk_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_1_0_include___isystem__c__ncs_toolchains_v2_2_0_opt_zephyr_sdk_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_1_0_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl___entry_0__pg succeeded with the following output:
+Change Dir: C:/ncs/v2.2.0/nrf/applications/nrf5340_audio/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/ncs/toolchains/v2.2.0/opt/bin/ninja.exe cmTC_7ddb1 && [1/2] Building C object CMakeFiles/cmTC_7ddb1.dir/src.c.obj
+[2/2] Linking C executable cmTC_7ddb1
+arm-zephyr-eabi-gcc.exe: warning: CMakeFiles/cmTC_7ddb1.dir/src.c.obj: linker input file unused because linking not done
+
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test check_C__c__nostartfiles__nostdlib__isystem__c__ncs_toolchains_v2_2_0_opt_zephyr_sdk_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_1_0_include___isystem__c__ncs_toolchains_v2_2_0_opt_zephyr_sdk_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_1_0_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl___entry_0__no_pie__mcpu_cortex_m33__mthumb__mabi_aapcs__mfpu_fpv5_sp_d16__mfloat_abi_hard__mfp16_format_ieee succeeded with the following output:
+Change Dir: C:/ncs/v2.2.0/nrf/applications/nrf5340_audio/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/ncs/toolchains/v2.2.0/opt/bin/ninja.exe cmTC_4e138 && [1/2] Building C object CMakeFiles/cmTC_4e138.dir/src.c.obj
+[2/2] Linking C executable cmTC_4e138
+arm-zephyr-eabi-gcc.exe: warning: CMakeFiles/cmTC_4e138.dir/src.c.obj: linker input file unused because linking not done
+
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test check_C__c__nostartfiles__nostdlib__isystem__c__ncs_toolchains_v2_2_0_opt_zephyr_sdk_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_1_0_include___isystem__c__ncs_toolchains_v2_2_0_opt_zephyr_sdk_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_1_0_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl___entry_0__Wl___gc_sections succeeded with the following output:
+Change Dir: C:/ncs/v2.2.0/nrf/applications/nrf5340_audio/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/ncs/toolchains/v2.2.0/opt/bin/ninja.exe cmTC_e8514 && [1/2] Building C object CMakeFiles/cmTC_e8514.dir/src.c.obj
+[2/2] Linking C executable cmTC_e8514
+arm-zephyr-eabi-gcc.exe: warning: CMakeFiles/cmTC_e8514.dir/src.c.obj: linker input file unused because linking not done
+
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test check_C__c__nostartfiles__nostdlib__isystem__c__ncs_toolchains_v2_2_0_opt_zephyr_sdk_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_1_0_include___isystem__c__ncs_toolchains_v2_2_0_opt_zephyr_sdk_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_1_0_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl___entry_0__Wl___build_id_none succeeded with the following output:
+Change Dir: C:/ncs/v2.2.0/nrf/applications/nrf5340_audio/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/ncs/toolchains/v2.2.0/opt/bin/ninja.exe cmTC_2cda6 && [1/2] Building C object CMakeFiles/cmTC_2cda6.dir/src.c.obj
+[2/2] Linking C executable cmTC_2cda6
+arm-zephyr-eabi-gcc.exe: warning: CMakeFiles/cmTC_2cda6.dir/src.c.obj: linker input file unused because linking not done
+
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test check_C__c__nostartfiles__nostdlib__isystem__c__ncs_toolchains_v2_2_0_opt_zephyr_sdk_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_1_0_include___isystem__c__ncs_toolchains_v2_2_0_opt_zephyr_sdk_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_1_0_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl___entry_0__Wl___sort_common_descending succeeded with the following output:
+Change Dir: C:/ncs/v2.2.0/nrf/applications/nrf5340_audio/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/ncs/toolchains/v2.2.0/opt/bin/ninja.exe cmTC_864a7 && [1/2] Building C object CMakeFiles/cmTC_864a7.dir/src.c.obj
+[2/2] Linking C executable cmTC_864a7
+arm-zephyr-eabi-gcc.exe: warning: CMakeFiles/cmTC_864a7.dir/src.c.obj: linker input file unused because linking not done
+
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test check_C__c__nostartfiles__nostdlib__isystem__c__ncs_toolchains_v2_2_0_opt_zephyr_sdk_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_1_0_include___isystem__c__ncs_toolchains_v2_2_0_opt_zephyr_sdk_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_1_0_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl___entry_0__Wl___sort_section_alignment succeeded with the following output:
+Change Dir: C:/ncs/v2.2.0/nrf/applications/nrf5340_audio/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/ncs/toolchains/v2.2.0/opt/bin/ninja.exe cmTC_4be93 && [1/2] Building C object CMakeFiles/cmTC_4be93.dir/src.c.obj
+[2/2] Linking C executable cmTC_4be93
+arm-zephyr-eabi-gcc.exe: warning: CMakeFiles/cmTC_4be93.dir/src.c.obj: linker input file unused because linking not done
+
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test check_C__c__nostartfiles__nostdlib__isystem__c__ncs_toolchains_v2_2_0_opt_zephyr_sdk_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_1_0_include___isystem__c__ncs_toolchains_v2_2_0_opt_zephyr_sdk_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_1_0_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl___entry_0__nostdlib succeeded with the following output:
+Change Dir: C:/ncs/v2.2.0/nrf/applications/nrf5340_audio/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/ncs/toolchains/v2.2.0/opt/bin/ninja.exe cmTC_199b2 && [1/2] Building C object CMakeFiles/cmTC_199b2.dir/src.c.obj
+[2/2] Linking C executable cmTC_199b2
+arm-zephyr-eabi-gcc.exe: warning: CMakeFiles/cmTC_199b2.dir/src.c.obj: linker input file unused because linking not done
+
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test check_C__c__nostartfiles__nostdlib__isystem__c__ncs_toolchains_v2_2_0_opt_zephyr_sdk_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_1_0_include___isystem__c__ncs_toolchains_v2_2_0_opt_zephyr_sdk_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_1_0_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl___entry_0__static succeeded with the following output:
+Change Dir: C:/ncs/v2.2.0/nrf/applications/nrf5340_audio/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/ncs/toolchains/v2.2.0/opt/bin/ninja.exe cmTC_ba7e3 && [1/2] Building C object CMakeFiles/cmTC_ba7e3.dir/src.c.obj
+[2/2] Linking C executable cmTC_ba7e3
+arm-zephyr-eabi-gcc.exe: warning: CMakeFiles/cmTC_ba7e3.dir/src.c.obj: linker input file unused because linking not done
+
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test check_C__c__nostartfiles__nostdlib__isystem__c__ncs_toolchains_v2_2_0_opt_zephyr_sdk_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_1_0_include___isystem__c__ncs_toolchains_v2_2_0_opt_zephyr_sdk_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_1_0_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl___entry_0__Wl__X succeeded with the following output:
+Change Dir: C:/ncs/v2.2.0/nrf/applications/nrf5340_audio/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/ncs/toolchains/v2.2.0/opt/bin/ninja.exe cmTC_c829a && [1/2] Building C object CMakeFiles/cmTC_c829a.dir/src.c.obj
+[2/2] Linking C executable cmTC_c829a
+arm-zephyr-eabi-gcc.exe: warning: CMakeFiles/cmTC_c829a.dir/src.c.obj: linker input file unused because linking not done
+
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test check_C__c__nostartfiles__nostdlib__isystem__c__ncs_toolchains_v2_2_0_opt_zephyr_sdk_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_1_0_include___isystem__c__ncs_toolchains_v2_2_0_opt_zephyr_sdk_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_1_0_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl___entry_0__Wl__N succeeded with the following output:
+Change Dir: C:/ncs/v2.2.0/nrf/applications/nrf5340_audio/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/ncs/toolchains/v2.2.0/opt/bin/ninja.exe cmTC_651bf && [1/2] Building C object CMakeFiles/cmTC_651bf.dir/src.c.obj
+[2/2] Linking C executable cmTC_651bf
+arm-zephyr-eabi-gcc.exe: warning: CMakeFiles/cmTC_651bf.dir/src.c.obj: linker input file unused because linking not done
+
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test check_C__c__nostartfiles__nostdlib__isystem__c__ncs_toolchains_v2_2_0_opt_zephyr_sdk_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_1_0_include___isystem__c__ncs_toolchains_v2_2_0_opt_zephyr_sdk_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_1_0_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl___entry_0__Wl___orphan_handling_warn succeeded with the following output:
+Change Dir: C:/ncs/v2.2.0/nrf/applications/nrf5340_audio/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/ncs/toolchains/v2.2.0/opt/bin/ninja.exe cmTC_58699 && [1/2] Building C object CMakeFiles/cmTC_58699.dir/src.c.obj
+[2/2] Linking C executable cmTC_58699
+arm-zephyr-eabi-gcc.exe: warning: CMakeFiles/cmTC_58699.dir/src.c.obj: linker input file unused because linking not done
+
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test check_fno_asynchronous_unwind_tables_C__c__nostartfiles__nostdlib__isystem__c__ncs_toolchains_v2_2_0_opt_zephyr_sdk_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_1_0_include___isystem__c__ncs_toolchains_v2_2_0_opt_zephyr_sdk_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_1_0_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl___entry_0 succeeded with the following output:
+Change Dir: C:/ncs/v2.2.0/nrf/applications/nrf5340_audio/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/ncs/toolchains/v2.2.0/opt/bin/ninja.exe cmTC_a94b5 && [1/2] Building C object CMakeFiles/cmTC_a94b5.dir/src.c.obj
+[2/2] Linking C executable cmTC_a94b5
+arm-zephyr-eabi-gcc.exe: warning: CMakeFiles/cmTC_a94b5.dir/src.c.obj: linker input file unused because linking not done
+
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test check_fno_reorder_functions_C__c__nostartfiles__nostdlib__isystem__c__ncs_toolchains_v2_2_0_opt_zephyr_sdk_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_1_0_include___isystem__c__ncs_toolchains_v2_2_0_opt_zephyr_sdk_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_1_0_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl___entry_0 succeeded with the following output:
+Change Dir: C:/ncs/v2.2.0/nrf/applications/nrf5340_audio/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/ncs/toolchains/v2.2.0/opt/bin/ninja.exe cmTC_84017 && [1/2] Building C object CMakeFiles/cmTC_84017.dir/src.c.obj
+[2/2] Linking C executable cmTC_84017
+arm-zephyr-eabi-gcc.exe: warning: CMakeFiles/cmTC_84017.dir/src.c.obj: linker input file unused because linking not done
+
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test check__param_min_pagesize_0_C__c__nostartfiles__nostdlib__isystem__c__ncs_toolchains_v2_2_0_opt_zephyr_sdk_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_1_0_include___isystem__c__ncs_toolchains_v2_2_0_opt_zephyr_sdk_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_1_0_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl___entry_0 succeeded with the following output:
+Change Dir: C:/ncs/v2.2.0/nrf/applications/nrf5340_audio/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/ncs/toolchains/v2.2.0/opt/bin/ninja.exe cmTC_d9ef6 && [1/2] Building C object CMakeFiles/cmTC_d9ef6.dir/src.c.obj
+[2/2] Linking C executable cmTC_d9ef6
+arm-zephyr-eabi-gcc.exe: warning: CMakeFiles/cmTC_d9ef6.dir/src.c.obj: linker input file unused because linking not done
+
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test check_fno_defer_pop_C__c__nostartfiles__nostdlib__isystem__c__ncs_toolchains_v2_2_0_opt_zephyr_sdk_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_1_0_include___isystem__c__ncs_toolchains_v2_2_0_opt_zephyr_sdk_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_1_0_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl___entry_0 succeeded with the following output:
+Change Dir: C:/ncs/v2.2.0/nrf/applications/nrf5340_audio/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/ncs/toolchains/v2.2.0/opt/bin/ninja.exe cmTC_87142 && [1/2] Building C object CMakeFiles/cmTC_87142.dir/src.c.obj
+[2/2] Linking C executable cmTC_87142
+arm-zephyr-eabi-gcc.exe: warning: CMakeFiles/cmTC_87142.dir/src.c.obj: linker input file unused because linking not done
+
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test check_fstack_usage_C__c__nostartfiles__nostdlib__isystem__c__ncs_toolchains_v2_2_0_opt_zephyr_sdk_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_1_0_include___isystem__c__ncs_toolchains_v2_2_0_opt_zephyr_sdk_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_1_0_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl___entry_0 succeeded with the following output:
+Change Dir: C:/ncs/v2.2.0/nrf/applications/nrf5340_audio/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/ncs/toolchains/v2.2.0/opt/bin/ninja.exe cmTC_eef09 && [1/2] Building C object CMakeFiles/cmTC_eef09.dir/src.c.obj
+[2/2] Linking C executable cmTC_eef09
+arm-zephyr-eabi-gcc.exe: warning: CMakeFiles/cmTC_eef09.dir/src.c.obj: linker input file unused because linking not done
+
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test check_fmacro_prefix_map_C__ncs_v2_2_0_nrf_applications_nrf5340_audio_CMAKE_SOURCE_DIR_C__c__nostartfiles__nostdlib__isystem__c__ncs_toolchains_v2_2_0_opt_zephyr_sdk_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_1_0_include___isystem__c__ncs_toolchains_v2_2_0_opt_zephyr_sdk_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_1_0_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl___entry_0 succeeded with the following output:
+Change Dir: C:/ncs/v2.2.0/nrf/applications/nrf5340_audio/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/ncs/toolchains/v2.2.0/opt/bin/ninja.exe cmTC_e7ee2 && [1/2] Building C object CMakeFiles/cmTC_e7ee2.dir/src.c.obj
+[2/2] Linking C executable cmTC_e7ee2
+arm-zephyr-eabi-gcc.exe: warning: CMakeFiles/cmTC_e7ee2.dir/src.c.obj: linker input file unused because linking not done
+
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test check_fmacro_prefix_map_C__ncs_v2_2_0_zephyr_ZEPHYR_BASE_C__c__nostartfiles__nostdlib__isystem__c__ncs_toolchains_v2_2_0_opt_zephyr_sdk_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_1_0_include___isystem__c__ncs_toolchains_v2_2_0_opt_zephyr_sdk_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_1_0_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl___entry_0 succeeded with the following output:
+Change Dir: C:/ncs/v2.2.0/nrf/applications/nrf5340_audio/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/ncs/toolchains/v2.2.0/opt/bin/ninja.exe cmTC_e3660 && [1/2] Building C object CMakeFiles/cmTC_e3660.dir/src.c.obj
+[2/2] Linking C executable cmTC_e3660
+arm-zephyr-eabi-gcc.exe: warning: CMakeFiles/cmTC_e3660.dir/src.c.obj: linker input file unused because linking not done
+
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test check_fmacro_prefix_map_C__ncs_v2_2_0_WEST_TOPDIR_C__c__nostartfiles__nostdlib__isystem__c__ncs_toolchains_v2_2_0_opt_zephyr_sdk_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_1_0_include___isystem__c__ncs_toolchains_v2_2_0_opt_zephyr_sdk_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_1_0_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl___entry_0 succeeded with the following output:
+Change Dir: C:/ncs/v2.2.0/nrf/applications/nrf5340_audio/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/ncs/toolchains/v2.2.0/opt/bin/ninja.exe cmTC_80275 && [1/2] Building C object CMakeFiles/cmTC_80275.dir/src.c.obj
+[2/2] Linking C executable cmTC_80275
+arm-zephyr-eabi-gcc.exe: warning: CMakeFiles/cmTC_80275.dir/src.c.obj: linker input file unused because linking not done
+
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test check_ffunction_sections_C__c__nostartfiles__nostdlib__isystem__c__ncs_toolchains_v2_2_0_opt_zephyr_sdk_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_1_0_include___isystem__c__ncs_toolchains_v2_2_0_opt_zephyr_sdk_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_1_0_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl___entry_0 succeeded with the following output:
+Change Dir: C:/ncs/v2.2.0/nrf/applications/nrf5340_audio/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/ncs/toolchains/v2.2.0/opt/bin/ninja.exe cmTC_1a703 && [1/2] Building C object CMakeFiles/cmTC_1a703.dir/src.c.obj
+[2/2] Linking C executable cmTC_1a703
+arm-zephyr-eabi-gcc.exe: warning: CMakeFiles/cmTC_1a703.dir/src.c.obj: linker input file unused because linking not done
+
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test check_fdata_sections_C__c__nostartfiles__nostdlib__isystem__c__ncs_toolchains_v2_2_0_opt_zephyr_sdk_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_1_0_include___isystem__c__ncs_toolchains_v2_2_0_opt_zephyr_sdk_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_1_0_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl___entry_0 succeeded with the following output:
+Change Dir: C:/ncs/v2.2.0/nrf/applications/nrf5340_audio/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/ncs/toolchains/v2.2.0/opt/bin/ninja.exe cmTC_3210c && [1/2] Building C object CMakeFiles/cmTC_3210c.dir/src.c.obj
+[2/2] Linking C executable cmTC_3210c
+arm-zephyr-eabi-gcc.exe: warning: CMakeFiles/cmTC_3210c.dir/src.c.obj: linker input file unused because linking not done
+
+
+Source file was:
+int main(void) { return 0; }
+The target system is: Generic - 3.2.99 - arm
+The host system is: Windows - 10.0.22621 - AMD64
+Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+Compiler: C:/ncs/toolchains/v2.2.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc.exe 
+Build flags: 
+Id flags: -c 
+
+The output was:
+0
+
+
+Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CMakeCCompilerId.o"
+
+The C compiler identification is GNU, found in "C:/ncs/v2.2.0/nrf/applications/nrf5340_audio/build/CMakeFiles/3.20.5/CompilerIdC/CMakeCCompilerId.o"
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+Compiler: C:/ncs/toolchains/v2.2.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc.exe 
+Build flags: 
+Id flags: -c 
+
+The output was:
+0
+
+
+Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CMakeCXXCompilerId.o"
+
+The CXX compiler identification is GNU, found in "C:/ncs/v2.2.0/nrf/applications/nrf5340_audio/build/CMakeFiles/3.20.5/CompilerIdCXX/CMakeCXXCompilerId.o"
+
+Checking whether the ASM compiler is GNU using "--version" matched "(GNU assembler)|(GCC)|(Free Software Foundation)":
+arm-zephyr-eabi-gcc.exe (Zephyr SDK 0.15.1) 12.1.0
+Copyright (C) 2022 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+Determining if files stdatomic.h exist passed with the following output:
+Change Dir: C:/ncs/v2.2.0/nrf/applications/nrf5340_audio/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/ncs/toolchains/v2.2.0/opt/bin/ninja.exe cmTC_e59a8 && [1/2] Building C object CMakeFiles/cmTC_e59a8.dir/HAVE_STDATOMIC_H.c.obj
+[2/2] Linking C executable cmTC_e59a8
+arm-zephyr-eabi-gcc.exe: warning: CMakeFiles/cmTC_e59a8.dir/HAVE_STDATOMIC_H.c.obj: linker input file unused because linking not done
+
+
+
+Determining if files fcntl.h exist passed with the following output:
+Change Dir: C:/ncs/v2.2.0/nrf/applications/nrf5340_audio/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/ncs/toolchains/v2.2.0/opt/bin/ninja.exe cmTC_29bb5 && [1/2] Building C object CMakeFiles/cmTC_29bb5.dir/HAVE_FCNTL_H.c.obj
+[2/2] Linking C executable cmTC_29bb5
+arm-zephyr-eabi-gcc.exe: warning: CMakeFiles/cmTC_29bb5.dir/HAVE_FCNTL_H.c.obj: linker input file unused because linking not done
+
+
+
+The target system is: Generic - 3.2.99 - arm
+The host system is: Windows - 10.0.22621 - AMD64
+Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+Compiler: C:/ncs/toolchains/v2.2.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc.exe 
+Build flags: 
+Id flags: -c 
+
+The output was:
+0
+
+
+Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CMakeCCompilerId.o"
+
+The C compiler identification is GNU, found in "C:/ncs/v2.2.0/nrf/applications/nrf5340_audio/build/CMakeFiles/3.20.5/CompilerIdC/CMakeCCompilerId.o"
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+Compiler: C:/ncs/toolchains/v2.2.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc.exe 
+Build flags: 
+Id flags: -c 
+
+The output was:
+0
+
+
+Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CMakeCXXCompilerId.o"
+
+The CXX compiler identification is GNU, found in "C:/ncs/v2.2.0/nrf/applications/nrf5340_audio/build/CMakeFiles/3.20.5/CompilerIdCXX/CMakeCXXCompilerId.o"
+
+Checking whether the ASM compiler is GNU using "--version" matched "(GNU assembler)|(GCC)|(Free Software Foundation)":
+arm-zephyr-eabi-gcc.exe (Zephyr SDK 0.15.1) 12.1.0
+Copyright (C) 2022 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+Determining if files stdatomic.h exist passed with the following output:
+Change Dir: C:/ncs/v2.2.0/nrf/applications/nrf5340_audio/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/ncs/toolchains/v2.2.0/opt/bin/ninja.exe cmTC_3049d && [1/2] Building C object CMakeFiles/cmTC_3049d.dir/HAVE_STDATOMIC_H.c.obj
+[2/2] Linking C executable cmTC_3049d
+arm-zephyr-eabi-gcc.exe: warning: CMakeFiles/cmTC_3049d.dir/HAVE_STDATOMIC_H.c.obj: linker input file unused because linking not done
+
+
+
+Determining if files fcntl.h exist passed with the following output:
+Change Dir: C:/ncs/v2.2.0/nrf/applications/nrf5340_audio/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/ncs/toolchains/v2.2.0/opt/bin/ninja.exe cmTC_c91a2 && [1/2] Building C object CMakeFiles/cmTC_c91a2.dir/HAVE_FCNTL_H.c.obj
+[2/2] Linking C executable cmTC_c91a2
+arm-zephyr-eabi-gcc.exe: warning: CMakeFiles/cmTC_c91a2.dir/HAVE_FCNTL_H.c.obj: linker input file unused because linking not done
+
+
+
+The target system is: Generic - 3.2.99 - arm
+The host system is: Windows - 10.0.22621 - AMD64
+Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+Compiler: C:/ncs/toolchains/v2.2.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc.exe 
+Build flags: 
+Id flags: -c 
+
+The output was:
+0
+
+
+Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CMakeCCompilerId.o"
+
+The C compiler identification is GNU, found in "C:/ncs/v2.2.0/nrf/applications/nrf5340_audio/build/CMakeFiles/3.20.5/CompilerIdC/CMakeCCompilerId.o"
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+Compiler: C:/ncs/toolchains/v2.2.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc.exe 
+Build flags: 
+Id flags: -c 
+
+The output was:
+0
+
+
+Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CMakeCXXCompilerId.o"
+
+The CXX compiler identification is GNU, found in "C:/ncs/v2.2.0/nrf/applications/nrf5340_audio/build/CMakeFiles/3.20.5/CompilerIdCXX/CMakeCXXCompilerId.o"
+
+Checking whether the ASM compiler is GNU using "--version" matched "(GNU assembler)|(GCC)|(Free Software Foundation)":
+arm-zephyr-eabi-gcc.exe (Zephyr SDK 0.15.1) 12.1.0
+Copyright (C) 2022 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+Determining if files stdatomic.h exist passed with the following output:
+Change Dir: C:/ncs/v2.2.0/nrf/applications/nrf5340_audio/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/ncs/toolchains/v2.2.0/opt/bin/ninja.exe cmTC_70515 && [1/2] Building C object CMakeFiles/cmTC_70515.dir/HAVE_STDATOMIC_H.c.obj
+[2/2] Linking C executable cmTC_70515
+arm-zephyr-eabi-gcc.exe: warning: CMakeFiles/cmTC_70515.dir/HAVE_STDATOMIC_H.c.obj: linker input file unused because linking not done
+
+
+
+Determining if files fcntl.h exist passed with the following output:
+Change Dir: C:/ncs/v2.2.0/nrf/applications/nrf5340_audio/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/ncs/toolchains/v2.2.0/opt/bin/ninja.exe cmTC_dd8c4 && [1/2] Building C object CMakeFiles/cmTC_dd8c4.dir/HAVE_FCNTL_H.c.obj
+[2/2] Linking C executable cmTC_dd8c4
+arm-zephyr-eabi-gcc.exe: warning: CMakeFiles/cmTC_dd8c4.dir/HAVE_FCNTL_H.c.obj: linker input file unused because linking not done
+
+
+
+The target system is: Generic - 3.2.99 - arm
+The host system is: Windows - 10.0.22621 - AMD64
+Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+Compiler: C:/ncs/toolchains/v2.2.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc.exe 
+Build flags: 
+Id flags: -c 
+
+The output was:
+0
+
+
+Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CMakeCCompilerId.o"
+
+The C compiler identification is GNU, found in "C:/ncs/v2.2.0/nrf/applications/nrf5340_audio/build/CMakeFiles/3.20.5/CompilerIdC/CMakeCCompilerId.o"
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+Compiler: C:/ncs/toolchains/v2.2.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc.exe 
+Build flags: 
+Id flags: -c 
+
+The output was:
+0
+
+
+Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CMakeCXXCompilerId.o"
+
+The CXX compiler identification is GNU, found in "C:/ncs/v2.2.0/nrf/applications/nrf5340_audio/build/CMakeFiles/3.20.5/CompilerIdCXX/CMakeCXXCompilerId.o"
+
+Checking whether the ASM compiler is GNU using "--version" matched "(GNU assembler)|(GCC)|(Free Software Foundation)":
+arm-zephyr-eabi-gcc.exe (Zephyr SDK 0.15.1) 12.1.0
+Copyright (C) 2022 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+Determining if files stdatomic.h exist passed with the following output:
+Change Dir: C:/ncs/v2.2.0/nrf/applications/nrf5340_audio/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/ncs/toolchains/v2.2.0/opt/bin/ninja.exe cmTC_6e994 && [1/2] Building C object CMakeFiles/cmTC_6e994.dir/HAVE_STDATOMIC_H.c.obj
+[2/2] Linking C executable cmTC_6e994
+arm-zephyr-eabi-gcc.exe: warning: CMakeFiles/cmTC_6e994.dir/HAVE_STDATOMIC_H.c.obj: linker input file unused because linking not done
+
+
+
+Determining if files fcntl.h exist passed with the following output:
+Change Dir: C:/ncs/v2.2.0/nrf/applications/nrf5340_audio/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/ncs/toolchains/v2.2.0/opt/bin/ninja.exe cmTC_65fa2 && [1/2] Building C object CMakeFiles/cmTC_65fa2.dir/HAVE_FCNTL_H.c.obj
+[2/2] Linking C executable cmTC_65fa2
+arm-zephyr-eabi-gcc.exe: warning: CMakeFiles/cmTC_65fa2.dir/HAVE_FCNTL_H.c.obj: linker input file unused because linking not done
+
+
+
+The target system is: Generic - 3.2.99 - arm
+The host system is: Windows - 10.0.22621 - AMD64
+Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+Compiler: C:/ncs/toolchains/v2.2.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc.exe 
+Build flags: 
+Id flags: -c 
+
+The output was:
+0
+
+
+Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CMakeCCompilerId.o"
+
+The C compiler identification is GNU, found in "C:/ncs/v2.2.0/nrf/applications/nrf5340_audio/build/CMakeFiles/3.20.5/CompilerIdC/CMakeCCompilerId.o"
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+Compiler: C:/ncs/toolchains/v2.2.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc.exe 
+Build flags: 
+Id flags: -c 
+
+The output was:
+0
+
+
+Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CMakeCXXCompilerId.o"
+
+The CXX compiler identification is GNU, found in "C:/ncs/v2.2.0/nrf/applications/nrf5340_audio/build/CMakeFiles/3.20.5/CompilerIdCXX/CMakeCXXCompilerId.o"
+
+Checking whether the ASM compiler is GNU using "--version" matched "(GNU assembler)|(GCC)|(Free Software Foundation)":
+arm-zephyr-eabi-gcc.exe (Zephyr SDK 0.15.1) 12.1.0
+Copyright (C) 2022 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+Determining if files stdatomic.h exist passed with the following output:
+Change Dir: C:/ncs/v2.2.0/nrf/applications/nrf5340_audio/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/ncs/toolchains/v2.2.0/opt/bin/ninja.exe cmTC_ba5c9 && [1/2] Building C object CMakeFiles/cmTC_ba5c9.dir/HAVE_STDATOMIC_H.c.obj
+[2/2] Linking C executable cmTC_ba5c9
+arm-zephyr-eabi-gcc.exe: warning: CMakeFiles/cmTC_ba5c9.dir/HAVE_STDATOMIC_H.c.obj: linker input file unused because linking not done
+
+
+
+Determining if files fcntl.h exist passed with the following output:
+Change Dir: C:/ncs/v2.2.0/nrf/applications/nrf5340_audio/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/ncs/toolchains/v2.2.0/opt/bin/ninja.exe cmTC_629d4 && [1/2] Building C object CMakeFiles/cmTC_629d4.dir/HAVE_FCNTL_H.c.obj
+[2/2] Linking C executable cmTC_629d4
+arm-zephyr-eabi-gcc.exe: warning: CMakeFiles/cmTC_629d4.dir/HAVE_FCNTL_H.c.obj: linker input file unused because linking not done
+
+
+
+The target system is: Generic - 3.2.99 - arm
+The host system is: Windows - 10.0.22621 - AMD64
+Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+Compiler: C:/ncs/toolchains/v2.2.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc.exe 
+Build flags: 
+Id flags: -c 
+
+The output was:
+0
+
+
+Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CMakeCCompilerId.o"
+
+The C compiler identification is GNU, found in "C:/ncs/v2.2.0/nrf/applications/nrf5340_audio/build/CMakeFiles/3.20.5/CompilerIdC/CMakeCCompilerId.o"
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+Compiler: C:/ncs/toolchains/v2.2.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc.exe 
+Build flags: 
+Id flags: -c 
+
+The output was:
+0
+
+
+Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CMakeCXXCompilerId.o"
+
+The CXX compiler identification is GNU, found in "C:/ncs/v2.2.0/nrf/applications/nrf5340_audio/build/CMakeFiles/3.20.5/CompilerIdCXX/CMakeCXXCompilerId.o"
+
+Checking whether the ASM compiler is GNU using "--version" matched "(GNU assembler)|(GCC)|(Free Software Foundation)":
+arm-zephyr-eabi-gcc.exe (Zephyr SDK 0.15.1) 12.1.0
+Copyright (C) 2022 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+Determining if files stdatomic.h exist passed with the following output:
+Change Dir: C:/ncs/v2.2.0/nrf/applications/nrf5340_audio/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/ncs/toolchains/v2.2.0/opt/bin/ninja.exe cmTC_a7659 && [1/2] Building C object CMakeFiles/cmTC_a7659.dir/HAVE_STDATOMIC_H.c.obj
+[2/2] Linking C executable cmTC_a7659
+arm-zephyr-eabi-gcc.exe: warning: CMakeFiles/cmTC_a7659.dir/HAVE_STDATOMIC_H.c.obj: linker input file unused because linking not done
+
+
+
+Determining if files fcntl.h exist passed with the following output:
+Change Dir: C:/ncs/v2.2.0/nrf/applications/nrf5340_audio/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/ncs/toolchains/v2.2.0/opt/bin/ninja.exe cmTC_d3cfa && [1/2] Building C object CMakeFiles/cmTC_d3cfa.dir/HAVE_FCNTL_H.c.obj
+[2/2] Linking C executable cmTC_d3cfa
+arm-zephyr-eabi-gcc.exe: warning: CMakeFiles/cmTC_d3cfa.dir/HAVE_FCNTL_H.c.obj: linker input file unused because linking not done
+
+
+
+The target system is: Generic - 3.2.99 - arm
+The host system is: Windows - 10.0.22621 - AMD64
+Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+Compiler: C:/ncs/toolchains/v2.2.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc.exe 
+Build flags: 
+Id flags: -c 
+
+The output was:
+0
+
+
+Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CMakeCCompilerId.o"
+
+The C compiler identification is GNU, found in "C:/ncs/v2.2.0/nrf/applications/nrf5340_audio/build/CMakeFiles/3.20.5/CompilerIdC/CMakeCCompilerId.o"
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+Compiler: C:/ncs/toolchains/v2.2.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc.exe 
+Build flags: 
+Id flags: -c 
+
+The output was:
+0
+
+
+Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CMakeCXXCompilerId.o"
+
+The CXX compiler identification is GNU, found in "C:/ncs/v2.2.0/nrf/applications/nrf5340_audio/build/CMakeFiles/3.20.5/CompilerIdCXX/CMakeCXXCompilerId.o"
+
+Checking whether the ASM compiler is GNU using "--version" matched "(GNU assembler)|(GCC)|(Free Software Foundation)":
+arm-zephyr-eabi-gcc.exe (Zephyr SDK 0.15.1) 12.1.0
+Copyright (C) 2022 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+Determining if files stdatomic.h exist passed with the following output:
+Change Dir: C:/ncs/v2.2.0/nrf/applications/nrf5340_audio/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/ncs/toolchains/v2.2.0/opt/bin/ninja.exe cmTC_e2568 && [1/2] Building C object CMakeFiles/cmTC_e2568.dir/HAVE_STDATOMIC_H.c.obj
+[2/2] Linking C executable cmTC_e2568
+arm-zephyr-eabi-gcc.exe: warning: CMakeFiles/cmTC_e2568.dir/HAVE_STDATOMIC_H.c.obj: linker input file unused because linking not done
+
+
+
+Determining if files fcntl.h exist passed with the following output:
+Change Dir: C:/ncs/v2.2.0/nrf/applications/nrf5340_audio/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/ncs/toolchains/v2.2.0/opt/bin/ninja.exe cmTC_9d6be && [1/2] Building C object CMakeFiles/cmTC_9d6be.dir/HAVE_FCNTL_H.c.obj
+[2/2] Linking C executable cmTC_9d6be
+arm-zephyr-eabi-gcc.exe: warning: CMakeFiles/cmTC_9d6be.dir/HAVE_FCNTL_H.c.obj: linker input file unused because linking not done
+
+
+
+The target system is: Generic - 3.2.99 - arm
+The host system is: Windows - 10.0.22621 - AMD64
+Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+Compiler: C:/ncs/toolchains/v2.2.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc.exe 
+Build flags: 
+Id flags: -c 
+
+The output was:
+0
+
+
+Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CMakeCCompilerId.o"
+
+The C compiler identification is GNU, found in "C:/ncs/v2.2.0/nrf/applications/nrf5340_audio/build/CMakeFiles/3.20.5/CompilerIdC/CMakeCCompilerId.o"
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+Compiler: C:/ncs/toolchains/v2.2.0/opt/zephyr-sdk/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc.exe 
+Build flags: 
+Id flags: -c 
+
+The output was:
+0
+
+
+Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CMakeCXXCompilerId.o"
+
+The CXX compiler identification is GNU, found in "C:/ncs/v2.2.0/nrf/applications/nrf5340_audio/build/CMakeFiles/3.20.5/CompilerIdCXX/CMakeCXXCompilerId.o"
+
+Checking whether the ASM compiler is GNU using "--version" matched "(GNU assembler)|(GCC)|(Free Software Foundation)":
+arm-zephyr-eabi-gcc.exe (Zephyr SDK 0.15.1) 12.1.0
+Copyright (C) 2022 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+Determining if files stdatomic.h exist passed with the following output:
+Change Dir: C:/ncs/v2.2.0/nrf/applications/nrf5340_audio/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/ncs/toolchains/v2.2.0/opt/bin/ninja.exe cmTC_0d41d && [1/2] Building C object CMakeFiles/cmTC_0d41d.dir/HAVE_STDATOMIC_H.c.obj
+[2/2] Linking C executable cmTC_0d41d
+arm-zephyr-eabi-gcc.exe: warning: CMakeFiles/cmTC_0d41d.dir/HAVE_STDATOMIC_H.c.obj: linker input file unused because linking not done
+
+
+
+Determining if files fcntl.h exist passed with the following output:
+Change Dir: C:/ncs/v2.2.0/nrf/applications/nrf5340_audio/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/ncs/toolchains/v2.2.0/opt/bin/ninja.exe cmTC_2631f && [1/2] Building C object CMakeFiles/cmTC_2631f.dir/HAVE_FCNTL_H.c.obj
+[2/2] Linking C executable cmTC_2631f
+arm-zephyr-eabi-gcc.exe: warning: CMakeFiles/cmTC_2631f.dir/HAVE_FCNTL_H.c.obj: linker input file unused because linking not done
+
+
+

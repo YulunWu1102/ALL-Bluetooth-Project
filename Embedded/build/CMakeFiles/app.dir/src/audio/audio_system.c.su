@@ -1,0 +1,10 @@
+../src/audio/audio_system.c:46:13:audio_gateway_configure	0	static
+../src/audio/audio_system.c:92:13:encoder_thread	3040	dynamic,bounded
+../src/audio/audio_system.c:165:5:audio_encode_test_tone_set	16	static
+../src/audio/audio_system.c:185:5:audio_decode	64	static
+../src/audio/audio_system.c:270:6:audio_system_start	160	dynamic,bounded
+../src/audio/audio_system.c:383:12:cmd_audio_system_start	8	static
+../src/audio/audio_system.c:320:6:audio_system_stop	64	dynamic,bounded
+../src/audio/audio_system.c:395:12:cmd_audio_system_stop	8	static
+../src/audio/audio_system.c:349:5:audio_system_fifo_rx_block_drop	32	static
+../src/audio/audio_system.c:367:6:audio_system_init	16	static
