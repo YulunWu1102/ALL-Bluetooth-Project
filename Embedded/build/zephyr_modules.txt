@@ -36,6 +36,6 @@
 "uoscore-uedhoc":"C:/ncs/v2.2.0/modules/lib/uoscore-uedhoc":"${ZEPHYR_UOSCORE_UEDHOC_CMAKE_DIR}"
 "zcbor":"C:/ncs/v2.2.0/modules/lib/zcbor":"${ZEPHYR_ZCBOR_CMAKE_DIR}"
 "zscilib":"C:/ncs/v2.2.0/modules/lib/zscilib":"C:/ncs/v2.2.0/modules/lib/zscilib"
-"conf":"C:/ncs/v2.2.0/nrf/applications/nrf5340_audio/dfu/conf":"C:/ncs/v2.2.0/nrf/applications/nrf5340_audio/dfu/conf/aci"
+"conf":"C:/ArgumentedListeningGroup/nrf5340_audio/dfu/conf":"C:/ArgumentedListeningGroup/nrf5340_audio/dfu/conf/aci"
 "nrfxlib":"C:/ncs/v2.2.0/nrfxlib":"${ZEPHYR_NRFXLIB_CMAKE_DIR}"
 "connectedhomeip":"C:/ncs/v2.2.0/modules/lib/matter":"C:/ncs/v2.2.0/modules/lib/matter/config/nrfconnect/chip-module"

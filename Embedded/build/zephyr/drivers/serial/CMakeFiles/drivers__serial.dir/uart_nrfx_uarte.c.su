@@ -14,6 +14,6 @@ C:/ncs/v2.2.0/zephyr/drivers/serial/uart_nrfx_uarte.c:1537:13:uarte_nrfx_poll_ou
 C:/ncs/v2.2.0/zephyr/include/zephyr/drivers/pinctrl.h:342:19:pinctrl_apply_state	16	static
 C:/ncs/v2.2.0/modules/hal/nordic/nrfx/helpers/nrfx_gppi.h:582:22:nrfx_gppi_event_endpoint_setup	8	static
 C:/ncs/v2.2.0/modules/hal/nordic/nrfx/helpers/nrfx_gppi.h:588:22:nrfx_gppi_task_endpoint_setup	8	static
-C:/ncs/v2.2.0/zephyr/drivers/serial/uart_nrfx_uarte.c:1798:12:endtx_stoptx_ppi_init	32	static
+C:/ncs/v2.2.0/zephyr/drivers/serial/uart_nrfx_uarte.c:1798:12:endtx_stoptx_ppi_init	56	static
 C:/ncs/v2.2.0/zephyr/drivers/serial/uart_nrfx_uarte.c:1817:12:uarte_instance_init	24	static
 C:/ncs/v2.2.0/zephyr/drivers/serial/uart_nrfx_uarte.c:2185:1:uarte_0_init	8	static

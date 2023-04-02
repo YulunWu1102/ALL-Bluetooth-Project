@@ -1,4 +1,4 @@
-# Install script for directory: C:/ncs/v2.2.0/nrf/applications/nrf5340_audio/src/modules
+# Install script for directory: C:/ArgumentedListeningGroup/nrf5340_audio/src/modules
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

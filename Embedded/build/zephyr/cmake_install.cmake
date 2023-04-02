@@ -39,241 +39,241 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/ncs/v2.2.0/nrf/applications/nrf5340_audio/build/zephyr/arch/cmake_install.cmake")
+  include("C:/ArgumentedListeningGroup/nrf5340_audio/build/zephyr/arch/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/ncs/v2.2.0/nrf/applications/nrf5340_audio/build/zephyr/lib/cmake_install.cmake")
+  include("C:/ArgumentedListeningGroup/nrf5340_audio/build/zephyr/lib/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/ncs/v2.2.0/nrf/applications/nrf5340_audio/build/zephyr/soc/arm/cmake_install.cmake")
+  include("C:/ArgumentedListeningGroup/nrf5340_audio/build/zephyr/soc/arm/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/ncs/v2.2.0/nrf/applications/nrf5340_audio/build/zephyr/boards/cmake_install.cmake")
+  include("C:/ArgumentedListeningGroup/nrf5340_audio/build/zephyr/boards/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/ncs/v2.2.0/nrf/applications/nrf5340_audio/build/zephyr/subsys/cmake_install.cmake")
+  include("C:/ArgumentedListeningGroup/nrf5340_audio/build/zephyr/subsys/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/ncs/v2.2.0/nrf/applications/nrf5340_audio/build/zephyr/drivers/cmake_install.cmake")
+  include("C:/ArgumentedListeningGroup/nrf5340_audio/build/zephyr/drivers/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/ncs/v2.2.0/nrf/applications/nrf5340_audio/build/modules/nrf/cmake_install.cmake")
+  include("C:/ArgumentedListeningGroup/nrf5340_audio/build/modules/nrf/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/ncs/v2.2.0/nrf/applications/nrf5340_audio/build/modules/hostap/cmake_install.cmake")
+  include("C:/ArgumentedListeningGroup/nrf5340_audio/build/modules/hostap/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/ncs/v2.2.0/nrf/applications/nrf5340_audio/build/modules/mcuboot/cmake_install.cmake")
+  include("C:/ArgumentedListeningGroup/nrf5340_audio/build/modules/mcuboot/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/ncs/v2.2.0/nrf/applications/nrf5340_audio/build/modules/mbedtls/cmake_install.cmake")
+  include("C:/ArgumentedListeningGroup/nrf5340_audio/build/modules/mbedtls/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/ncs/v2.2.0/nrf/applications/nrf5340_audio/build/modules/trusted-firmware-m/cmake_install.cmake")
+  include("C:/ArgumentedListeningGroup/nrf5340_audio/build/modules/trusted-firmware-m/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/ncs/v2.2.0/nrf/applications/nrf5340_audio/build/modules/cjson/cmake_install.cmake")
+  include("C:/ArgumentedListeningGroup/nrf5340_audio/build/modules/cjson/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/ncs/v2.2.0/nrf/applications/nrf5340_audio/build/modules/azure-sdk-for-c/cmake_install.cmake")
+  include("C:/ArgumentedListeningGroup/nrf5340_audio/build/modules/azure-sdk-for-c/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/ncs/v2.2.0/nrf/applications/nrf5340_audio/build/modules/memfault-firmware-sdk/cmake_install.cmake")
+  include("C:/ArgumentedListeningGroup/nrf5340_audio/build/modules/memfault-firmware-sdk/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/ncs/v2.2.0/nrf/applications/nrf5340_audio/build/modules/cirrus-logic/cmake_install.cmake")
+  include("C:/ArgumentedListeningGroup/nrf5340_audio/build/modules/cirrus-logic/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/ncs/v2.2.0/nrf/applications/nrf5340_audio/build/modules/openthread/cmake_install.cmake")
+  include("C:/ArgumentedListeningGroup/nrf5340_audio/build/modules/openthread/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/ncs/v2.2.0/nrf/applications/nrf5340_audio/build/modules/canopennode/cmake_install.cmake")
+  include("C:/ArgumentedListeningGroup/nrf5340_audio/build/modules/canopennode/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/ncs/v2.2.0/nrf/applications/nrf5340_audio/build/modules/chre/cmake_install.cmake")
+  include("C:/ArgumentedListeningGroup/nrf5340_audio/build/modules/chre/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/ncs/v2.2.0/nrf/applications/nrf5340_audio/build/modules/cmsis/cmake_install.cmake")
+  include("C:/ArgumentedListeningGroup/nrf5340_audio/build/modules/cmsis/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/ncs/v2.2.0/nrf/applications/nrf5340_audio/build/modules/fatfs/cmake_install.cmake")
+  include("C:/ArgumentedListeningGroup/nrf5340_audio/build/modules/fatfs/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/ncs/v2.2.0/nrf/applications/nrf5340_audio/build/modules/hal_nordic/cmake_install.cmake")
+  include("C:/ArgumentedListeningGroup/nrf5340_audio/build/modules/hal_nordic/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/ncs/v2.2.0/nrf/applications/nrf5340_audio/build/modules/st/cmake_install.cmake")
+  include("C:/ArgumentedListeningGroup/nrf5340_audio/build/modules/st/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/ncs/v2.2.0/nrf/applications/nrf5340_audio/build/modules/hal_wurthelektronik/cmake_install.cmake")
+  include("C:/ArgumentedListeningGroup/nrf5340_audio/build/modules/hal_wurthelektronik/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/ncs/v2.2.0/nrf/applications/nrf5340_audio/build/modules/libmetal/cmake_install.cmake")
+  include("C:/ArgumentedListeningGroup/nrf5340_audio/build/modules/libmetal/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/ncs/v2.2.0/nrf/applications/nrf5340_audio/build/modules/liblc3/cmake_install.cmake")
+  include("C:/ArgumentedListeningGroup/nrf5340_audio/build/modules/liblc3/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/ncs/v2.2.0/nrf/applications/nrf5340_audio/build/modules/littlefs/cmake_install.cmake")
+  include("C:/ArgumentedListeningGroup/nrf5340_audio/build/modules/littlefs/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/ncs/v2.2.0/nrf/applications/nrf5340_audio/build/modules/loramac-node/cmake_install.cmake")
+  include("C:/ArgumentedListeningGroup/nrf5340_audio/build/modules/loramac-node/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/ncs/v2.2.0/nrf/applications/nrf5340_audio/build/modules/lvgl/cmake_install.cmake")
+  include("C:/ArgumentedListeningGroup/nrf5340_audio/build/modules/lvgl/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/ncs/v2.2.0/nrf/applications/nrf5340_audio/build/modules/lz4/cmake_install.cmake")
+  include("C:/ArgumentedListeningGroup/nrf5340_audio/build/modules/lz4/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/ncs/v2.2.0/nrf/applications/nrf5340_audio/build/modules/mipi-sys-t/cmake_install.cmake")
+  include("C:/ArgumentedListeningGroup/nrf5340_audio/build/modules/mipi-sys-t/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/ncs/v2.2.0/nrf/applications/nrf5340_audio/build/modules/nanopb/cmake_install.cmake")
+  include("C:/ArgumentedListeningGroup/nrf5340_audio/build/modules/nanopb/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/ncs/v2.2.0/nrf/applications/nrf5340_audio/build/modules/nrf_hw_models/cmake_install.cmake")
+  include("C:/ArgumentedListeningGroup/nrf5340_audio/build/modules/nrf_hw_models/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/ncs/v2.2.0/nrf/applications/nrf5340_audio/build/modules/open-amp/cmake_install.cmake")
+  include("C:/ArgumentedListeningGroup/nrf5340_audio/build/modules/open-amp/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/ncs/v2.2.0/nrf/applications/nrf5340_audio/build/modules/picolibc/cmake_install.cmake")
+  include("C:/ArgumentedListeningGroup/nrf5340_audio/build/modules/picolibc/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/ncs/v2.2.0/nrf/applications/nrf5340_audio/build/modules/segger/cmake_install.cmake")
+  include("C:/ArgumentedListeningGroup/nrf5340_audio/build/modules/segger/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/ncs/v2.2.0/nrf/applications/nrf5340_audio/build/modules/tinycbor/cmake_install.cmake")
+  include("C:/ArgumentedListeningGroup/nrf5340_audio/build/modules/tinycbor/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/ncs/v2.2.0/nrf/applications/nrf5340_audio/build/modules/tinycrypt/cmake_install.cmake")
+  include("C:/ArgumentedListeningGroup/nrf5340_audio/build/modules/tinycrypt/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/ncs/v2.2.0/nrf/applications/nrf5340_audio/build/modules/TraceRecorder/cmake_install.cmake")
+  include("C:/ArgumentedListeningGroup/nrf5340_audio/build/modules/TraceRecorder/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/ncs/v2.2.0/nrf/applications/nrf5340_audio/build/modules/uoscore-uedhoc/cmake_install.cmake")
+  include("C:/ArgumentedListeningGroup/nrf5340_audio/build/modules/uoscore-uedhoc/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/ncs/v2.2.0/nrf/applications/nrf5340_audio/build/modules/zcbor/cmake_install.cmake")
+  include("C:/ArgumentedListeningGroup/nrf5340_audio/build/modules/zcbor/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/ncs/v2.2.0/nrf/applications/nrf5340_audio/build/modules/zscilib/cmake_install.cmake")
+  include("C:/ArgumentedListeningGroup/nrf5340_audio/build/modules/zscilib/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/ncs/v2.2.0/nrf/applications/nrf5340_audio/build/modules/conf/cmake_install.cmake")
+  include("C:/ArgumentedListeningGroup/nrf5340_audio/build/modules/conf/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/ncs/v2.2.0/nrf/applications/nrf5340_audio/build/modules/nrfxlib/cmake_install.cmake")
+  include("C:/ArgumentedListeningGroup/nrf5340_audio/build/modules/nrfxlib/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/ncs/v2.2.0/nrf/applications/nrf5340_audio/build/modules/connectedhomeip/cmake_install.cmake")
+  include("C:/ArgumentedListeningGroup/nrf5340_audio/build/modules/connectedhomeip/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/ncs/v2.2.0/nrf/applications/nrf5340_audio/build/zephyr/kernel/cmake_install.cmake")
+  include("C:/ArgumentedListeningGroup/nrf5340_audio/build/zephyr/kernel/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/ncs/v2.2.0/nrf/applications/nrf5340_audio/build/zephyr/cmake/flash/cmake_install.cmake")
+  include("C:/ArgumentedListeningGroup/nrf5340_audio/build/zephyr/cmake/flash/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/ncs/v2.2.0/nrf/applications/nrf5340_audio/build/zephyr/cmake/usage/cmake_install.cmake")
+  include("C:/ArgumentedListeningGroup/nrf5340_audio/build/zephyr/cmake/usage/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/ncs/v2.2.0/nrf/applications/nrf5340_audio/build/zephyr/cmake/reports/cmake_install.cmake")
+  include("C:/ArgumentedListeningGroup/nrf5340_audio/build/zephyr/cmake/reports/cmake_install.cmake")
 endif()
 

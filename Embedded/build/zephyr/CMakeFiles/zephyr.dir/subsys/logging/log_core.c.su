@@ -29,6 +29,7 @@ C:/ncs/v2.2.0/zephyr/subsys/logging/log_core.c:196:6:z_log_vprintk	0	static
 C:/ncs/v2.2.0/zephyr/subsys/logging/log_core.c:322:6:log_init	8	static
 C:/ncs/v2.2.0/zephyr/subsys/logging/log_core.c:342:6:log_thread_set	8	static
 C:/ncs/v2.2.0/zephyr/subsys/logging/log_core.c:351:5:log_set_timestamp_func	8	static
+C:/ncs/v2.2.0/zephyr/subsys/logging/log_core.c:468:6:unordered_notify	56	dynamic,bounded
 C:/ncs/v2.2.0/zephyr/subsys/logging/log_core.c:475:6:z_log_notify_backend_enabled	8	static
 C:/ncs/v2.2.0/zephyr/subsys/logging/log_core.c:550:10:z_impl_log_buffered_cnt	0	static
 C:/ncs/v2.2.0/zephyr/subsys/logging/log_core.c:563:6:z_log_dropped	0	static
@@ -39,7 +40,6 @@ C:/ncs/v2.2.0/zephyr/subsys/logging/log_core.c:576:6:z_log_dropped_pending	0	sta
 C:/ncs/v2.2.0/zephyr/subsys/logging/log_core.c:581:6:z_log_msg_init	8	static
 C:/ncs/v2.2.0/zephyr/subsys/logging/log_core.c:220:6:log_core_init	8	static
 C:/ncs/v2.2.0/zephyr/subsys/logging/log_core.c:597:17:z_log_msg_alloc	8	static
-C:/ncs/v2.2.0/zephyr/subsys/logging/log_core.c:468:6:unordered_notify	16	static
 C:/ncs/v2.2.0/zephyr/subsys/logging/log_core.c:622:24:z_log_msg_local_claim	8	static
 C:/ncs/v2.2.0/zephyr/subsys/logging/log_core.c:628:24:z_log_msg_claim_oldest	24	static
 C:/ncs/v2.2.0/zephyr/subsys/logging/log_core.c:692:24:z_log_msg_claim	8	static

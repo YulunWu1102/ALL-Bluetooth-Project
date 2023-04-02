@@ -39,121 +39,121 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/ncs/v2.2.0/nrf/applications/nrf5340_audio/build/zephyr/subsys/debug/cmake_install.cmake")
+  include("C:/ArgumentedListeningGroup/nrf5340_audio/build/zephyr/subsys/debug/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/ncs/v2.2.0/nrf/applications/nrf5340_audio/build/zephyr/subsys/logging/cmake_install.cmake")
+  include("C:/ArgumentedListeningGroup/nrf5340_audio/build/zephyr/subsys/logging/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/ncs/v2.2.0/nrf/applications/nrf5340_audio/build/zephyr/subsys/bluetooth/cmake_install.cmake")
+  include("C:/ArgumentedListeningGroup/nrf5340_audio/build/zephyr/subsys/bluetooth/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/ncs/v2.2.0/nrf/applications/nrf5340_audio/build/zephyr/subsys/shell/cmake_install.cmake")
+  include("C:/ArgumentedListeningGroup/nrf5340_audio/build/zephyr/subsys/shell/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/ncs/v2.2.0/nrf/applications/nrf5340_audio/build/zephyr/subsys/disk/cmake_install.cmake")
+  include("C:/ArgumentedListeningGroup/nrf5340_audio/build/zephyr/subsys/disk/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/ncs/v2.2.0/nrf/applications/nrf5340_audio/build/zephyr/subsys/fs/cmake_install.cmake")
+  include("C:/ArgumentedListeningGroup/nrf5340_audio/build/zephyr/subsys/fs/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/ncs/v2.2.0/nrf/applications/nrf5340_audio/build/zephyr/subsys/ipc/cmake_install.cmake")
+  include("C:/ArgumentedListeningGroup/nrf5340_audio/build/zephyr/subsys/ipc/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/ncs/v2.2.0/nrf/applications/nrf5340_audio/build/zephyr/subsys/mgmt/cmake_install.cmake")
+  include("C:/ArgumentedListeningGroup/nrf5340_audio/build/zephyr/subsys/mgmt/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/ncs/v2.2.0/nrf/applications/nrf5340_audio/build/zephyr/subsys/net/cmake_install.cmake")
+  include("C:/ArgumentedListeningGroup/nrf5340_audio/build/zephyr/subsys/net/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/ncs/v2.2.0/nrf/applications/nrf5340_audio/build/zephyr/subsys/usb/cmake_install.cmake")
+  include("C:/ArgumentedListeningGroup/nrf5340_audio/build/zephyr/subsys/usb/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/ncs/v2.2.0/nrf/applications/nrf5340_audio/build/zephyr/subsys/random/cmake_install.cmake")
+  include("C:/ArgumentedListeningGroup/nrf5340_audio/build/zephyr/subsys/random/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/ncs/v2.2.0/nrf/applications/nrf5340_audio/build/zephyr/subsys/storage/cmake_install.cmake")
+  include("C:/ArgumentedListeningGroup/nrf5340_audio/build/zephyr/subsys/storage/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/ncs/v2.2.0/nrf/applications/nrf5340_audio/build/zephyr/subsys/settings/cmake_install.cmake")
+  include("C:/ArgumentedListeningGroup/nrf5340_audio/build/zephyr/subsys/settings/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/ncs/v2.2.0/nrf/applications/nrf5340_audio/build/zephyr/subsys/fb/cmake_install.cmake")
+  include("C:/ArgumentedListeningGroup/nrf5340_audio/build/zephyr/subsys/fb/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/ncs/v2.2.0/nrf/applications/nrf5340_audio/build/zephyr/subsys/portability/cmake_install.cmake")
+  include("C:/ArgumentedListeningGroup/nrf5340_audio/build/zephyr/subsys/portability/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/ncs/v2.2.0/nrf/applications/nrf5340_audio/build/zephyr/subsys/pm/cmake_install.cmake")
+  include("C:/ArgumentedListeningGroup/nrf5340_audio/build/zephyr/subsys/pm/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/ncs/v2.2.0/nrf/applications/nrf5340_audio/build/zephyr/subsys/stats/cmake_install.cmake")
+  include("C:/ArgumentedListeningGroup/nrf5340_audio/build/zephyr/subsys/stats/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/ncs/v2.2.0/nrf/applications/nrf5340_audio/build/zephyr/subsys/task_wdt/cmake_install.cmake")
+  include("C:/ArgumentedListeningGroup/nrf5340_audio/build/zephyr/subsys/task_wdt/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/ncs/v2.2.0/nrf/applications/nrf5340_audio/build/zephyr/subsys/testsuite/cmake_install.cmake")
+  include("C:/ArgumentedListeningGroup/nrf5340_audio/build/zephyr/subsys/testsuite/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/ncs/v2.2.0/nrf/applications/nrf5340_audio/build/zephyr/subsys/tracing/cmake_install.cmake")
+  include("C:/ArgumentedListeningGroup/nrf5340_audio/build/zephyr/subsys/tracing/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/ncs/v2.2.0/nrf/applications/nrf5340_audio/build/zephyr/subsys/canbus/cmake_install.cmake")
+  include("C:/ArgumentedListeningGroup/nrf5340_audio/build/zephyr/subsys/canbus/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/ncs/v2.2.0/nrf/applications/nrf5340_audio/build/zephyr/subsys/modbus/cmake_install.cmake")
+  include("C:/ArgumentedListeningGroup/nrf5340_audio/build/zephyr/subsys/modbus/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/ncs/v2.2.0/nrf/applications/nrf5340_audio/build/zephyr/subsys/sd/cmake_install.cmake")
+  include("C:/ArgumentedListeningGroup/nrf5340_audio/build/zephyr/subsys/sd/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/ncs/v2.2.0/nrf/applications/nrf5340_audio/build/zephyr/subsys/rtio/cmake_install.cmake")
+  include("C:/ArgumentedListeningGroup/nrf5340_audio/build/zephyr/subsys/rtio/cmake_install.cmake")
 endif()
 

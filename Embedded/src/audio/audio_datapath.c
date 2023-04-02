@@ -24,12 +24,10 @@
 #include "contin_array.h"
 #include "pcm_mix.h"
 #include "streamctrl.h"
+#include "processing.h"
 
 #include <zephyr/logging/log.h>
 LOG_MODULE_REGISTER(audio_datapath, CONFIG_AUDIO_DATAPATH_LOG_LEVEL);
-
-uint32_t packetsRXCount = 0, overflow = 0, badFrame = 0; 
-bool loss=false;
 
 /*
  * Terminology
@@ -616,6 +614,19 @@ static void audio_datapath_i2s_blk_complete(uint32_t frame_start_ts, uint32_t *r
 		if (tone_active) {
 			tone_mix(tx_buf);
 		}
+		
+		TestLibrary(tx_buf, tx_buf, BLK_STEREO_SIZE_OCTETS);
+		// Customized processing
+		// if (rx_buf_released != NULL){
+		// 	pcm_mix(tx_buf, BLK_STEREO_SIZE_OCTETS, rx_buf_released, BLOCK_SIZE_BYTES, B_MONO_INTO_A_STEREO_L);
+		// }
+		// else {
+		// 	void* localSound;
+		// 	size_t size;
+		// 	data_fifo_pointer_last_filled_get(ctrl_blk.in.fifo, &localSound, &size, K_NO_WAIT); 
+		// 	pcm_mix(tx_buf, BLK_STEREO_SIZE_OCTETS, localSound, size, B_MONO_INTO_A_STEREO_L);
+		// }
+		
 	}
 
 	/********** I2S RX **********/
@@ -772,7 +783,6 @@ void audio_datapath_stream_out(const uint8_t *buf, size_t size, uint32_t sdu_ref
 	}
 
 	/*** Check incoming data ***/
-	packetsRXCount++;
 
 	if (!buf) {
 		LOG_ERR("buf is NULL");
@@ -780,21 +790,12 @@ void audio_datapath_stream_out(const uint8_t *buf, size_t size, uint32_t sdu_ref
 
 	if (sdu_ref_us == ctrl_blk.previous_sdu_ref_us) {
 		LOG_WRN("Duplicate sdu_ref_us (%d) - Dropping audio frame", sdu_ref_us);
-		packetsRXCount--;
-		if (loss) {badFrame--;}
 		return;
 	}
 
 	if (bad_frame) {
 		/* Error in the frame or frame lost - sdu_ref_us is stil valid */
-		loss=true;
-		badFrame++;
-		LOG_INF("Bad audio frame %d out of %d", badFrame, packetsRXCount);
-		
-	}
-
-	if (packetsRXCount % 100 == 0){
-		LOG_INF("Bad audio frame %d out of %d", badFrame, packetsRXCount);
+		LOG_DBG("Bad audio frame");
 	}
 
 	bool sdu_ref_not_consecutive = false;
@@ -834,9 +835,10 @@ void audio_datapath_stream_out(const uint8_t *buf, size_t size, uint32_t sdu_ref
 
 	int ret;
 	size_t pcm_size;
-	//LOG_INF("decode");
+
+	//return data and stored them into the pointer in the struct ctrl_blk
 	ret = sw_codec_decode(buf, size, bad_frame, &ctrl_blk.decoded_data, &pcm_size);
-	//LOG_INF("complete");
+
 	if (ret) {
 		LOG_WRN("SW codec decode error: %d", ret);
 	}

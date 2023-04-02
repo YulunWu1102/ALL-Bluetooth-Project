@@ -39,16 +39,16 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/ncs/v2.2.0/nrf/applications/nrf5340_audio/build/modules/nrf/lib/bin/cmake_install.cmake")
+  include("C:/ArgumentedListeningGroup/nrf5340_audio/build/modules/nrf/lib/bin/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/ncs/v2.2.0/nrf/applications/nrf5340_audio/build/modules/nrf/lib/flash_patch/cmake_install.cmake")
+  include("C:/ArgumentedListeningGroup/nrf5340_audio/build/modules/nrf/lib/flash_patch/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/ncs/v2.2.0/nrf/applications/nrf5340_audio/build/modules/nrf/lib/fatal_error/cmake_install.cmake")
+  include("C:/ArgumentedListeningGroup/nrf5340_audio/build/modules/nrf/lib/fatal_error/cmake_install.cmake")
 endif()
 

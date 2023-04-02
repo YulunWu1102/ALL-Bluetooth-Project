@@ -13,5 +13,5 @@ C:/ncs/v2.2.0/zephyr/soc/arm/nordic_nrf/nrf53/sync_rtc.c:128:13:rtc_cb	8	static
 C:/ncs/v2.2.0/zephyr/soc/arm/nordic_nrf/nrf53/sync_rtc.c:73:13:ppi_ipc_to_rtc	16	static
 C:/ncs/v2.2.0/zephyr/soc/arm/nordic_nrf/nrf53/sync_rtc.c:153:13:remote_callback	24	static
 C:/ncs/v2.2.0/zephyr/soc/arm/nordic_nrf/nrf53/sync_rtc.c:192:13:mbox_callback	16	static
-C:/ncs/v2.2.0/zephyr/soc/arm/nordic_nrf/nrf53/sync_rtc.c:229:12:sync_rtc_setup	16	static
+C:/ncs/v2.2.0/zephyr/soc/arm/nordic_nrf/nrf53/sync_rtc.c:229:12:sync_rtc_setup	64	dynamic,bounded
 C:/ncs/v2.2.0/zephyr/soc/arm/nordic_nrf/nrf53/sync_rtc.c:119:5:z_nrf_rtc_timer_nrf53net_offset_get	0	static

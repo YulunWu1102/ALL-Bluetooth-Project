@@ -39,21 +39,21 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/ncs/v2.2.0/nrf/applications/nrf5340_audio/build/zephyr/subsys/bluetooth/common/cmake_install.cmake")
+  include("C:/ArgumentedListeningGroup/nrf5340_audio/build/zephyr/subsys/bluetooth/common/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/ncs/v2.2.0/nrf/applications/nrf5340_audio/build/zephyr/subsys/bluetooth/host/cmake_install.cmake")
+  include("C:/ArgumentedListeningGroup/nrf5340_audio/build/zephyr/subsys/bluetooth/host/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/ncs/v2.2.0/nrf/applications/nrf5340_audio/build/zephyr/subsys/bluetooth/services/cmake_install.cmake")
+  include("C:/ArgumentedListeningGroup/nrf5340_audio/build/zephyr/subsys/bluetooth/services/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/ncs/v2.2.0/nrf/applications/nrf5340_audio/build/zephyr/subsys/bluetooth/audio/cmake_install.cmake")
+  include("C:/ArgumentedListeningGroup/nrf5340_audio/build/zephyr/subsys/bluetooth/audio/cmake_install.cmake")
 endif()
 

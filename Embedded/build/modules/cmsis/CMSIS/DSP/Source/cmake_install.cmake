@@ -39,16 +39,31 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/ncs/v2.2.0/nrf/applications/nrf5340_audio/build/modules/cmsis/CMSIS/DSP/Source/BasicMathFunctions/cmake_install.cmake")
+  include("C:/ArgumentedListeningGroup/nrf5340_audio/build/modules/cmsis/CMSIS/DSP/Source/BasicMathFunctions/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/ncs/v2.2.0/nrf/applications/nrf5340_audio/build/modules/cmsis/CMSIS/DSP/Source/FastMathFunctions/cmake_install.cmake")
+  include("C:/ArgumentedListeningGroup/nrf5340_audio/build/modules/cmsis/CMSIS/DSP/Source/FastMathFunctions/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/ncs/v2.2.0/nrf/applications/nrf5340_audio/build/modules/cmsis/CMSIS/DSP/Source/CommonTables/cmake_install.cmake")
+  include("C:/ArgumentedListeningGroup/nrf5340_audio/build/modules/cmsis/CMSIS/DSP/Source/FilteringFunctions/cmake_install.cmake")
+endif()
+
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
+  include("C:/ArgumentedListeningGroup/nrf5340_audio/build/modules/cmsis/CMSIS/DSP/Source/InterpolationFunctions/cmake_install.cmake")
+endif()
+
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
+  include("C:/ArgumentedListeningGroup/nrf5340_audio/build/modules/cmsis/CMSIS/DSP/Source/SupportFunctions/cmake_install.cmake")
+endif()
+
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
+  include("C:/ArgumentedListeningGroup/nrf5340_audio/build/modules/cmsis/CMSIS/DSP/Source/CommonTables/cmake_install.cmake")
 endif()
 

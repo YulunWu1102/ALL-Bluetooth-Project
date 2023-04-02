@@ -39,6 +39,6 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/ncs/v2.2.0/nrf/applications/nrf5340_audio/build/zephyr/boards/boards/arm/nrf5340_audio_dk_nrf5340_cpuapp/cmake_install.cmake")
+  include("C:/ArgumentedListeningGroup/nrf5340_audio/build/zephyr/boards/boards/arm/nrf5340_audio_dk_nrf5340_cpuapp/cmake_install.cmake")
 endif()
 

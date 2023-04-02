@@ -137,8 +137,10 @@ static void encoder_thread(void *arg1, void *arg2, void *arg3)
 						    &num_bytes);
 				ERR_CHK(ret);
 			}
+
 			ret = sw_codec_encode(pcm_raw_data, FRAME_SIZE_BYTES, &encoded_data,
 					      &encoded_data_size);
+
 			ERR_CHK_MSG(ret, "Encode failed");
 		}
 

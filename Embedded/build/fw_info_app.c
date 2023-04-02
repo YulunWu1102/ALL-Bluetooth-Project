@@ -17,7 +17,7 @@
 #include <zephyr/logging/log.h>
 LOG_MODULE_REGISTER(fw_info, CONFIG_FW_INFO_LOG_LEVEL);
 
-static const char COMPILE_DATE[] = "Mon Jan 30 12:50:23 2023";
+static const char COMPILE_DATE[] = "Sat Apr 01 15:45:22 2023";
 static const char NRF5340_CORE[] = "nRF5340 Audio nRF5340 Audio DK cpuapp";
 
 int fw_info_app_print(void)

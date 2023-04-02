@@ -37,8 +37,6 @@ struct ble_iso_data {
 	uint32_t recv_frame_ts;
 } __packed;
 
-
-
 DATA_FIFO_DEFINE(ble_fifo_rx, CONFIG_BUF_BLE_RX_PACKET_NUM, WB_UP(sizeof(struct ble_iso_data)));
 
 static struct k_thread audio_datapath_thread_data;
@@ -131,7 +129,6 @@ static void le_audio_rx_data_handler(uint8_t const *const p_data, size_t data_si
 
 	uint32_t blocks_alloced_num, blocks_locked_num;
 
-
 	ret = data_fifo_num_used_get(&ble_fifo_rx, &blocks_alloced_num, &blocks_locked_num);
 	ERR_CHK(ret);
 
@@ -142,7 +139,6 @@ static void le_audio_rx_data_handler(uint8_t const *const p_data, size_t data_si
 		size_t stale_size;
 
 		LOG_WRN("BLE ISO RX overrun");
-		
 
 		ret = data_fifo_pointer_last_filled_get(&ble_fifo_rx, &stale_data, &stale_size,
 							K_NO_WAIT);

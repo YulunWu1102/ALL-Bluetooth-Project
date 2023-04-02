@@ -3,4 +3,4 @@
 ../src/utils/pcm_mix.c:42:13:pcm_mix_b_mono_into_a_stereo_lr	32	static
 ../src/utils/pcm_mix.c:61:13:pcm_mix_b_mono_into_a_stereo_l	32	static
 ../src/utils/pcm_mix.c:76:13:pcm_mix_b_mono_into_a_stereo_r	32	static
-../src/utils/pcm_mix.c:90:5:pcm_mix	24	static
+../src/utils/pcm_mix.c:90:5:pcm_mix	64	dynamic,bounded

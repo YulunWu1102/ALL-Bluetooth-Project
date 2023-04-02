@@ -20,10 +20,10 @@ C:/ncs/v2.2.0/zephyr/subsys/fs/nvs/nvs.c:583:12:nvs_gc	64	static
 C:/ncs/v2.2.0/zephyr/subsys/fs/nvs/nvs.c:406:12:nvs_flash_wrt_entry	24	static
 C:/ncs/v2.2.0/zephyr/subsys/fs/nvs/nvs.c:540:12:nvs_sector_close	24	static
 C:/ncs/v2.2.0/zephyr/subsys/fs/nvs/nvs.c:698:12:nvs_startup	56	static
-C:/ncs/v2.2.0/zephyr/subsys/fs/nvs/nvs.c:907:5:nvs_clear	24	static
-C:/ncs/v2.2.0/zephyr/subsys/fs/nvs/nvs.c:931:5:nvs_mount	24	static
-C:/ncs/v2.2.0/zephyr/subsys/fs/nvs/nvs.c:990:9:nvs_write	64	static
+C:/ncs/v2.2.0/zephyr/subsys/fs/nvs/nvs.c:907:5:nvs_clear	48	static
+C:/ncs/v2.2.0/zephyr/subsys/fs/nvs/nvs.c:931:5:nvs_mount	144	static
+C:/ncs/v2.2.0/zephyr/subsys/fs/nvs/nvs.c:990:9:nvs_write	88	static
 C:/ncs/v2.2.0/zephyr/subsys/fs/nvs/nvs.c:1108:5:nvs_delete	8	static
-C:/ncs/v2.2.0/zephyr/subsys/fs/nvs/nvs.c:1113:9:nvs_read_hist	48	static
+C:/ncs/v2.2.0/zephyr/subsys/fs/nvs/nvs.c:1113:9:nvs_read_hist	72	static
 C:/ncs/v2.2.0/zephyr/subsys/fs/nvs/nvs.c:1179:9:nvs_read	16	static
-C:/ncs/v2.2.0/zephyr/subsys/fs/nvs/nvs.c:1187:9:nvs_calc_free_space	48	static
+C:/ncs/v2.2.0/zephyr/subsys/fs/nvs/nvs.c:1187:9:nvs_calc_free_space	72	static

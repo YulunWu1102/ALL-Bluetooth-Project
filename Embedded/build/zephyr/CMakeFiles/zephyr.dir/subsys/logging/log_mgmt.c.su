@@ -16,7 +16,7 @@ C:/ncs/v2.2.0/zephyr/include/zephyr/logging/log_backend.h:289:20:log_backend_dea
 C:/ncs/v2.2.0/zephyr/include/zephyr/logging/log_link.h:122:19:log_link_initiate	8	static
 C:/ncs/v2.2.0/zephyr/include/zephyr/logging/log_link.h:141:19:log_link_activate	8	static
 C:/ncs/v2.2.0/zephyr/subsys/logging/log_mgmt.c:149:13:cache_init	8	static
-C:/ncs/v2.2.0/zephyr/subsys/logging/log_mgmt.c:132:12:link_filters_init	24	static
+C:/ncs/v2.2.0/zephyr/subsys/logging/log_mgmt.c:132:12:link_filters_init	48	static
 C:/ncs/v2.2.0/zephyr/subsys/logging/log_mgmt.c:119:11:z_log_link_get_dynamic_filter	24	static
 C:/ncs/v2.2.0/zephyr/subsys/logging/log_mgmt.c:172:9:z_log_ext_domain_count	16	static
 C:/ncs/v2.2.0/zephyr/subsys/logging/log_mgmt.c:193:10:log_src_cnt_get	0	static

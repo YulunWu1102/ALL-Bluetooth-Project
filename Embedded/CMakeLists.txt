@@ -67,6 +67,13 @@ zephyr_library_include_directories(
     src/utils/macros
 )
 
+# zephyr_library_include_directories("C:/ncs/v2.2.0/modules/hal/cmsis/CMSIS/DSP/Include")
+# target_link_libraries(app PRIVATE "C:/ncs/v2.2.0/modules/hal/cmsis/CMSIS/DSP/Lib")
+
+# set(CMSIS_DSP_DIR "C:/ncs/v2.2.0/modules/hal/cmsis/CMSIS/DSP")
+# add_subdirectory(${CMSIS_DSP_DIR} ${CMAKE_BINARY_DIR}/CMSIS-DSP)
+# target_link_libraries(app PRIVATE arm_cortexM4lf_math)
+
 zephyr_library_include_directories(app PRIVATE
     ${ZEPHYR_NRF_MODULE_DIR}/boards/arm/nrf5340_audio_dk_nrf5340)
 
@@ -77,6 +84,8 @@ add_subdirectory(src/drivers)
 add_subdirectory(src/events)
 add_subdirectory(src/modules)
 add_subdirectory(src/utils)
+# add_subdirectory("C:/ncs/v2.2.0/modules/hal/cmsis/CMSIS/DSP/Include")
+# target_link_libraries(app PRIVATE arm_cortexM4lf_math)
 
 ## Cirrus Logic
 if (CONFIG_HW_CODEC_CIRRUS_LOGIC)
