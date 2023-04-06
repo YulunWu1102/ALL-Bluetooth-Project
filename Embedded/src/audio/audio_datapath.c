@@ -615,17 +615,27 @@ static void audio_datapath_i2s_blk_complete(uint32_t frame_start_ts, uint32_t *r
 			tone_mix(tx_buf);
 		}
 		
-		TestLibrary(tx_buf, tx_buf, BLK_STEREO_SIZE_OCTETS);
 		// Customized processing
-		// if (rx_buf_released != NULL){
-		// 	pcm_mix(tx_buf, BLK_STEREO_SIZE_OCTETS, rx_buf_released, BLOCK_SIZE_BYTES, B_MONO_INTO_A_STEREO_L);
-		// }
-		// else {
-		// 	void* localSound;
-		// 	size_t size;
-		// 	data_fifo_pointer_last_filled_get(ctrl_blk.in.fifo, &localSound, &size, K_NO_WAIT); 
-		// 	pcm_mix(tx_buf, BLK_STEREO_SIZE_OCTETS, localSound, size, B_MONO_INTO_A_STEREO_L);
-		// }
+		TestLibrary(tx_buf, tx_buf, BLK_STEREO_SIZE_OCTETS);
+		
+			// if (rx_buf_released != NULL){
+			// 	int i;
+			// 	uint16_t* temp = tx_buf;
+			// 	uint16_t* temp1 = rx_buf_released;
+			// 	for (i = 0; i < BLK_STEREO_SIZE_OCTETS/2; i++){	
+			// 		temp[i] += temp1[i];
+			// 	}
+		 	// }
+			// else {
+			//  	uint16_t* localSound;
+			//  	size_t size;
+			//  	data_fifo_pointer_last_filled_get(ctrl_blk.in.fifo, &localSound, &size, K_NO_WAIT); 
+			// 	int i;
+			// 	uint16_t* temp = tx_buf;
+			// 	for (i = 0; i < BLK_STEREO_SIZE_OCTETS/2; i++){
+			// 		temp[i] += localSound[i];
+			// 	}
+			// }
 		
 	}
 
