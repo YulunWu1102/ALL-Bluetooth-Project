@@ -615,28 +615,39 @@ static void audio_datapath_i2s_blk_complete(uint32_t frame_start_ts, uint32_t *r
 			tone_mix(tx_buf);
 		}
 		
-		// Customized processing
-		TestLibrary(tx_buf, tx_buf, BLK_STEREO_SIZE_OCTETS);
-		
-			// if (rx_buf_released != NULL){
-			// 	int i;
-			// 	uint16_t* temp = tx_buf;
-			// 	uint16_t* temp1 = rx_buf_released;
-			// 	for (i = 0; i < BLK_STEREO_SIZE_OCTETS/2; i++){	
-			// 		temp[i] += temp1[i];
-			// 	}
-		 	// }
-			// else {
-			//  	uint16_t* localSound;
-			//  	size_t size;
-			//  	data_fifo_pointer_last_filled_get(ctrl_blk.in.fifo, &localSound, &size, K_NO_WAIT); 
-			// 	int i;
-			// 	uint16_t* temp = tx_buf;
-			// 	for (i = 0; i < BLK_STEREO_SIZE_OCTETS/2; i++){
-			// 		temp[i] += localSound[i];
-			// 	}
-			// }
-		
+		// //Test convolution with an impulse resposne
+		// TestLibrary(tx_buf, tx_buf, BLK_STEREO_SIZE_OCTETS);
+
+		//Test FIRFilter Design
+		//Update FIRFiter
+		//if the last voice sample is not null
+		// if (rx_buf_released != NULL){
+		// 	updataFIRFilter(rx_buf_released, tx_buf, tx_buf);
+		// } else {
+		//  	uint16_t* localSound;
+		//  	size_t size;
+		//  	data_fifo_pointer_last_filled_get(ctrl_blk.in.fifo, (void**)&localSound, &size, K_NO_WAIT); 
+		// 	updataFIRFilter(localSound, tx_buf, tx_buf);
+		// }
+
+		// if (rx_buf_released != NULL){
+		// 	int i;
+		// 	uint16_t* temp = tx_buf;
+		// 	uint16_t* temp1 = rx_buf_released;
+		// 	for (i = 0; i < BLK_STEREO_SIZE_OCTETS/2; i++){	
+		// 		temp[i] += temp1[i];
+		// 	}
+		// }
+		// else {
+		//  	uint16_t* localSound;
+		//  	size_t size;
+		//  	data_fifo_pointer_last_filled_get(ctrl_blk.in.fifo, &localSound, &size, K_NO_WAIT); 
+		// 	int i;
+		// 	uint16_t* temp = tx_buf;
+		// 	for (i = 0; i < BLK_STEREO_SIZE_OCTETS/2; i++){
+		// 		temp[i] += localSound[i];
+		// 	}
+		// }
 	}
 
 	/********** I2S RX **********/
@@ -932,6 +943,7 @@ int audio_datapath_init(void)
 	ctrl_blk.datapath_initialized = true;
 	ctrl_blk.drift_comp.hfclkaudio_comp_enabled = true;
 	ctrl_blk.pres_comp.pres_delay_us = DEFAULT_PRES_DLY_US;
+	//InitFIRFilter();
 
 	return 0;
 }
