@@ -155,6 +155,9 @@ static bool tone_active;
 /* Buffer which can hold max 1 period test tone at 100 Hz */
 static uint16_t test_tone_buf[CONFIG_AUDIO_SAMPLE_RATE_HZ / 100];
 static size_t test_tone_size;
+static int temp = 0;
+
+static void log_array(int16_t* ref, int16_t* out);
 
 static void hfclkaudio_set(uint16_t freq_value)
 {
@@ -614,22 +617,27 @@ static void audio_datapath_i2s_blk_complete(uint32_t frame_start_ts, uint32_t *r
 		if (tone_active) {
 			tone_mix(tx_buf);
 		}
-		
-		// //Test convolution with an impulse resposne
+
 		// TestLibrary(tx_buf, tx_buf, BLK_STEREO_SIZE_OCTETS);
 
-		//Test FIRFilter Design
-		//Update FIRFiter
-		//if the last voice sample is not null
-		// if (rx_buf_released != NULL){
-		// 	updataFIRFilter(rx_buf_released, tx_buf, tx_buf);
-		// } else {
-		//  	uint16_t* localSound;
-		//  	size_t size;
-		//  	data_fifo_pointer_last_filled_get(ctrl_blk.in.fifo, (void**)&localSound, &size, K_NO_WAIT); 
-		// 	updataFIRFilter(localSound, tx_buf, tx_buf);
-		// }
+		// log_array(rx_buf_released, tx_buf);
+		// Test FIRFilter Design
+		// Update FIRFiter
+		if (rx_buf_released != NULL){
+			//LOG_WRN("RX not NULL");
+			customFIR(rx_buf_released, tx_buf);			
+			tx_buf = (uint8_t*)getResult();
+		} else {
+		 	int16_t* localSound;
+		 	size_t size;
+			//LOG_WRN("RX NULL");
+		 	data_fifo_pointer_last_filled_get(ctrl_blk.in.fifo, &localSound, &size, K_NO_WAIT); 
+			customFIR(rx_buf_released, tx_buf);
+			tx_buf = (uint8_t*)getResult();
+		}
+		
 
+		//Mix remote sound with local mic input
 		// if (rx_buf_released != NULL){
 		// 	int i;
 		// 	uint16_t* temp = tx_buf;
@@ -695,6 +703,17 @@ static void audio_datapath_i2s_blk_complete(uint32_t frame_start_ts, uint32_t *r
 
 	/*** Drift compensation ***/
 	audio_datapath_drift_compensation(frame_start_ts);
+}
+
+static void log_array(int16_t* ref, int16_t* out){
+	temp++;
+	if (temp == 1000){
+		temp = 0;
+		int16_t* coef = getCoeffPtr(); 
+		LOG_WRN("input: %d %d %d %d %d %d %d %d\n", ref[0], ref[1], ref[2], ref[3], ref[4], ref[5], ref[6], ref[7]);
+		LOG_WRN("reference: %d %d %d %d %d %d %d %d\n", out[0], out[1], out[2], out[3], out[4], out[5], out[6], out[7]);
+		LOG_WRN("error: %d %d %d %d %d %d %d %d\n", coef[0], coef[1], coef[2], coef[3], coef[4], coef[5], coef[6], coef[7]);
+	}
 }
 
 static void audio_datapath_i2s_start(void)
@@ -943,7 +962,9 @@ int audio_datapath_init(void)
 	ctrl_blk.datapath_initialized = true;
 	ctrl_blk.drift_comp.hfclkaudio_comp_enabled = true;
 	ctrl_blk.pres_comp.pres_delay_us = DEFAULT_PRES_DLY_US;
-	//InitFIRFilter();
+	LOG_WRN("init lms filter start");
+	InitFIRFilter();
+	LOG_WRN("init lms filter complete");
 
 	return 0;
 }

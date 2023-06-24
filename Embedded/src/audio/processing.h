@@ -3,10 +3,12 @@
 
 #include "arm_math.h"
 
-#define AUDIO_BLOCK_SAMPLES 192/2
-
 void TestLibrary(uint8_t * decoded_input, uint8_t * processed_decoded_output, size_t decoded_data_length);
 void InitFIRFilter();
-void updataFIRFilter(void* input, void* reference, void* output);
+void filterFIR(uint32_t * input, void* reference, void* output);
+void* getCoeffPtr();
+//FIR filter without library
+void customFIR(uint32_t* input, uint8_t* reference);
+int16_t* getResult();
 
 #endif
