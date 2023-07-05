@@ -620,40 +620,44 @@ static void audio_datapath_i2s_blk_complete(uint32_t frame_start_ts, uint32_t *r
 
 		// TestLibrary(tx_buf, tx_buf, BLK_STEREO_SIZE_OCTETS);
 
-		// log_array(rx_buf_released, tx_buf);
+		/* 	
+			rx_buf: microphone I2S received samples, size = 96 bytes * 2 channels
+			Mono mic input is duplicated to both channels.
+		 	tx_buf: bluetooth received packet, size = 96 * 2. 
+		 	one channel is filled with zero. Data in two channels stored alternatively.
+		*/
+		log_array(rx_buf_released, tx_buf);
+		
 		// Test FIRFilter Design
-		// Update FIRFiter
 		if (rx_buf_released != NULL){
-			//LOG_WRN("RX not NULL");
 			filterFIR(rx_buf_released, tx_buf, tx_buf);
 		} else {
 		 	int16_t* localSound;
 		 	size_t size;
-			//LOG_WRN("RX NULL");
 		 	data_fifo_pointer_last_filled_get(ctrl_blk.in.fifo, &localSound, &size, K_NO_WAIT); 
 			filterFIR(localSound, tx_buf, tx_buf);
 		}
 		
 
-		//Mix remote sound with local mic input
-		if (rx_buf_released != NULL){
-			int i;
-			uint16_t* temp = tx_buf;
-			uint16_t* temp1 = rx_buf_released;
-			for (i = 0; i < BLK_STEREO_SIZE_OCTETS/2; i++){	
-				temp[i] += temp1[i];
-			}
-		}
-		else {
-		 	uint16_t* localSound;
-		 	size_t size;
-		 	data_fifo_pointer_last_filled_get(ctrl_blk.in.fifo, &localSound, &size, K_NO_WAIT); 
-			int i;
-			uint16_t* temp = tx_buf;
-			for (i = 0; i < BLK_STEREO_SIZE_OCTETS/2; i++){
-				temp[i] += localSound[i];
-			}
-		}
+		// Mix remote sound with local mic input
+		// if (rx_buf_released != NULL){
+		// 	int i;
+		// 	uint16_t* temp = tx_buf;
+		// 	uint16_t* temp1 = rx_buf_released;
+		// 	for (i = 0; i < BLK_STEREO_SIZE_OCTETS/2; i++){	
+		// 		temp[i] += temp1[i];
+		// 	}
+		// }
+		// else {
+		//  	uint16_t* localSound;
+		//  	size_t size;
+		//  	data_fifo_pointer_last_filled_get(ctrl_blk.in.fifo, &localSound, &size, K_NO_WAIT); 
+		// 	int i;
+		// 	uint16_t* temp = tx_buf;
+		// 	for (i = 0; i < BLK_STEREO_SIZE_OCTETS/2; i++){
+		// 		temp[i] += localSound[i];
+		// 	}
+		// }
 	}
 
 	/********** I2S RX **********/

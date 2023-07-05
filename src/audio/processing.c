@@ -1,14 +1,17 @@
 #include "processing.h"
 #include "arm_math.h"
 
+#define STEREO_BLOCK_BYTES 192
+#define MONO_BLOCK_BYTES (STEREO_BLOCK_BYTES/2)
+#define BYTE_DEPTH 2
+#define MONO_BLOCK_SAMPLES (MONO_BLOCK_BYTES/BYTE_DEPTH)
 
-#define AUDIO_BLOCK_SAMPLES 96
 #define COEFFICIENT 6
 
-arm_lms_instance_q15 lms_instance;
-q15_t State[AUDIO_BLOCK_SAMPLES + COEFFICIENT - 1];
-q15_t errorArr[AUDIO_BLOCK_SAMPLES];
-q15_t coeff_p[COEFFICIENT];
+static arm_lms_instance_q15 lms_instance;
+static q15_t State[MONO_BLOCK_SAMPLES + COEFFICIENT - 1];
+static q15_t errorArr[MONO_BLOCK_SAMPLES];
+static q15_t coeff_p[COEFFICIENT];
 
 void TestLibrary(uint8_t * decoded_input, uint8_t * processed_decoded_output, size_t decoded_data_length){
     //convert PCM to float points
@@ -29,13 +32,29 @@ void TestLibrary(uint8_t * decoded_input, uint8_t * processed_decoded_output, si
 
 //Initilize a FIR filter used for LMS filtering
 void InitFIRFilter(){
-    //declare a arm lms filter
-    q15_t learningrate = 0.1;
-    arm_lms_init_q15(&lms_instance, COEFFICIENT, coeff_p,  State, learningrate, AUDIO_BLOCK_SAMPLES, 0);
+    float learningrate_float = 0.0005;
+    q15_t learningrate;
+    arm_float_to_q15(&learningrate_float, &learningrate, 1);
+    arm_lms_init_q15(&lms_instance, COEFFICIENT, coeff_p,  State, learningrate, MONO_BLOCK_SAMPLES, 0);
 }
 
-void filterFIR(uint32_t* input, void* reference, void* output){
-    arm_lms_q15(&lms_instance, (q15_t *)input, (q15_t*)reference, (q15_t*)output, errorArr, AUDIO_BLOCK_SAMPLES);
+void filterFIR(int16_t* input, int16_t* reference, int16_t* output){
+    q15_t input_mono[MONO_BLOCK_SAMPLES]; 
+    q15_t reference_mono[MONO_BLOCK_SAMPLES];
+    q15_t output_mono[MONO_BLOCK_SAMPLES];
+    
+    int i;
+    for (i = 0; i < MONO_BLOCK_SAMPLES; i++){
+        input_mono[i] = input[2*i];
+        reference_mono[i] = reference[2*i];
+    }
+
+    arm_lms_q15(&lms_instance, (q15_t *)input_mono, (q15_t*)reference_mono, (q15_t*)output_mono, errorArr, MONO_BLOCK_SAMPLES);
+
+    for (i = 0; i < MONO_BLOCK_SAMPLES; i++){
+        output[2*i] = output_mono[i];
+        output[2*i + 1] = output_mono[i];
+    }
 }
 
 void* getCoeffPtr(){
