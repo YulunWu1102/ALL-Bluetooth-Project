@@ -121,7 +121,7 @@ static struct {
 
 	struct {
 		struct data_fifo *fifo;
-	} in;
+	} in; /* From I2S to BLE */
 
 	struct {
 		int16_t __aligned(sizeof(uint32_t)) fifo[MAX_FIFO_SIZE];
@@ -130,7 +130,7 @@ static struct {
 		uint32_t prod_blk_ts[FIFO_NUM_BLKS];
 		/* Statistics */
 		uint32_t total_blk_underruns;
-	} out;
+	} out; /* From BLE to I2S */
 
 	uint32_t previous_sdu_ref_us;
 	uint32_t current_pres_dly_us;
@@ -626,17 +626,16 @@ static void audio_datapath_i2s_blk_complete(uint32_t frame_start_ts, uint32_t *r
 		 	tx_buf: bluetooth received packet, size = 96 * 2. 
 		 	one channel is filled with zero. Data in two channels stored alternatively.
 		*/
-		log_array(rx_buf_released, tx_buf);
-		
 		// Test FIRFilter Design
-		if (rx_buf_released != NULL){
-			filterFIR(rx_buf_released, tx_buf, tx_buf);
-		} else {
-		 	int16_t* localSound;
-		 	size_t size;
-		 	data_fifo_pointer_last_filled_get(ctrl_blk.in.fifo, &localSound, &size, K_NO_WAIT); 
-			filterFIR(localSound, tx_buf, tx_buf);
-		}
+		// if (rx_buf_released != NULL){
+		// 	filterFIR(rx_buf_released, tx_buf, tx_buf);
+		// 	log_array(rx_buf_released, tx_buf);
+		// } else {
+		//  	int16_t* localSound;
+		//  	size_t size;
+		//  	data_fifo_pointer_last_filled_get(ctrl_blk.in.fifo, &localSound, &size, K_NO_WAIT); 
+		// 	filterFIR(localSound, tx_buf, tx_buf);
+		// }
 		
 
 		// Mix remote sound with local mic input
@@ -892,7 +891,6 @@ void audio_datapath_stream_out(const uint8_t *buf, size_t size, uint32_t sdu_ref
 	}
 
 	/*** Add audio data to FIFO buffer ***/
-
 	int32_t num_blks_in_fifo = ctrl_blk.out.prod_blk_idx - ctrl_blk.out.cons_blk_idx;
 
 	if ((num_blks_in_fifo + NUM_BLKS_IN_FRAME) > FIFO_NUM_BLKS) {
@@ -904,7 +902,17 @@ void audio_datapath_stream_out(const uint8_t *buf, size_t size, uint32_t sdu_ref
 
 	uint32_t out_blk_idx = ctrl_blk.out.prod_blk_idx;
 
+	int16_t *local_blk;
+	int16_t *remote_blk = (int16_t*)ctrl_blk.decoded_data;
+	size_t size_temp;
+
 	for (uint32_t i = 0; i < NUM_BLKS_IN_FRAME; i++) {
+		ret = data_fifo_pointer_last_filled_get(ctrl_blk.in.fifo, &local_blk, &size_temp, K_NO_WAIT);
+		ERR_CHK(ret);
+
+		filterFIR((int16_t*)remote_blk, local_blk, local_blk);
+		log_array(local_blk, remote_blk);
+
 		memcpy(&ctrl_blk.out.fifo[out_blk_idx * BLK_STEREO_NUM_SAMPS],
 		       &((int16_t *)ctrl_blk.decoded_data)[i * BLK_STEREO_NUM_SAMPS],
 		       BLK_STEREO_SIZE_OCTETS);
@@ -913,6 +921,7 @@ void audio_datapath_stream_out(const uint8_t *buf, size_t size, uint32_t sdu_ref
 		ctrl_blk.out.prod_blk_ts[out_blk_idx] = recv_frame_ts_us + (i * BLK_PERIOD_US);
 
 		out_blk_idx = NEXT_IDX(out_blk_idx);
+		remote_blk = &((int16_t*)ctrl_blk.decoded_data)[i * BLK_STEREO_NUM_SAMPS];
 	}
 
 	ctrl_blk.out.prod_blk_idx = out_blk_idx;

@@ -32,8 +32,8 @@ void TestLibrary(uint8_t * decoded_input, uint8_t * processed_decoded_output, si
 
 //Initilize a FIR filter used for LMS filtering
 void InitFIRFilter(){
-    float learningrate_float = 0.0005;
-    q15_t learningrate;
+    float32_t learningrate_float = 0.0005;
+    q15_t learningrate = 0;
     arm_float_to_q15(&learningrate_float, &learningrate, 1);
     arm_lms_init_q15(&lms_instance, COEFFICIENT, coeff_p,  State, learningrate, MONO_BLOCK_SAMPLES, 0);
 }
@@ -49,7 +49,7 @@ void filterFIR(int16_t* input, int16_t* reference, int16_t* output){
         reference_mono[i] = reference[2*i];
     }
 
-    arm_lms_q15(&lms_instance, (q15_t *)input_mono, (q15_t*)reference_mono, (q15_t*)output_mono, errorArr, MONO_BLOCK_SAMPLES);
+    arm_lms_q15(&lms_instance, input_mono, reference_mono, output_mono, errorArr, MONO_BLOCK_SAMPLES);
 
     for (i = 0; i < MONO_BLOCK_SAMPLES; i++){
         output[2*i] = output_mono[i];
