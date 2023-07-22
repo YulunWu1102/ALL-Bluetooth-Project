@@ -1,17 +1,17 @@
 #include "processing.h"
 #include "arm_math.h"
 
+#define STEREO_BLOCK_BYTES 192
+#define MONO_BLOCK_BYTES (STEREO_BLOCK_BYTES/2)
+#define BYTE_DEPTH 2
+#define MONO_BLOCK_SAMPLES (MONO_BLOCK_BYTES/BYTE_DEPTH)
 
-#define AUDIO_BLOCK_SAMPLES 96
 #define COEFFICIENT 6
 
-arm_lms_instance_q15 lms_instance;
-q15_t State[AUDIO_BLOCK_SAMPLES + COEFFICIENT - 1];
-q15_t errorArr[AUDIO_BLOCK_SAMPLES];
-float32_t coeff_p[COEFFICIENT];
-//output
-float y_predict_result[AUDIO_BLOCK_SAMPLES];
-int16_t y_predict_result_converted[AUDIO_BLOCK_SAMPLES];
+static arm_lms_instance_q15 lms_instance;
+static q15_t State[MONO_BLOCK_SAMPLES + COEFFICIENT - 1];
+static q15_t errorArr[MONO_BLOCK_SAMPLES];
+static q15_t coeff_p[COEFFICIENT];
 
 void TestLibrary(uint8_t * decoded_input, uint8_t * processed_decoded_output, size_t decoded_data_length){
     //convert PCM to float points
@@ -32,62 +32,31 @@ void TestLibrary(uint8_t * decoded_input, uint8_t * processed_decoded_output, si
 
 //Initilize a FIR filter used for LMS filtering
 void InitFIRFilter(){
-    //Adaptive filter coefficients array
-    for(int i = 0; i < COEFFICIENT; i++) {
-        coeff_p[i] = 0.0;
-    }
-    
-    //declare a arm lms filter
-    //q15_t learningrate = 0.1;
-    //arm_lms_init_q15(&lms_instance, COEFFICIENT, coeff_p,  State, learningrate, AUDIO_BLOCK_SAMPLES, 0);
+    float32_t learningrate_float = 0.0005;
+    q15_t learningrate = 0;
+    arm_float_to_q15(&learningrate_float, &learningrate, 1);
+    arm_lms_init_q15(&lms_instance, COEFFICIENT, coeff_p,  State, learningrate, MONO_BLOCK_SAMPLES, 0);
 }
 
-void filterFIR(uint32_t* input, void* reference, void* output){
-    arm_lms_q15(&lms_instance, (q15_t *)input, (q15_t*)reference, (q15_t*)output, errorArr, AUDIO_BLOCK_SAMPLES);
+void filterFIR(int16_t* input, int16_t* reference, int16_t* output){
+    q15_t input_mono[MONO_BLOCK_SAMPLES]; 
+    q15_t reference_mono[MONO_BLOCK_SAMPLES];
+    q15_t output_mono[MONO_BLOCK_SAMPLES];
+    
+    int i;
+    for (i = 0; i < MONO_BLOCK_SAMPLES; i++){
+        input_mono[i] = input[2*i];
+        reference_mono[i] = reference[2*i];
+    }
+
+    arm_lms_q15(&lms_instance, input_mono, reference_mono, output_mono, errorArr, MONO_BLOCK_SAMPLES);
+
+    for (i = 0; i < MONO_BLOCK_SAMPLES; i++){
+        output[2*i] = output_mono[i];
+        output[2*i + 1] = output_mono[i];
+    }
 }
 
 void* getCoeffPtr(){
     return errorArr;
-}
-
-//def lms(x, y, K, mu = 0.01):
-void customFIR(uint32_t* input, uint8_t* reference){
-    float mu = 0.005; 
-    //Adaptive filter input array Vector to store [x[n],x[n-1],...,x[n-K+1]]
-    float xn[COEFFICIENT];
-    int i;
-    for(i = 0; i < COEFFICIENT; i++) {
-        xn[i] = 0.0;
-    }
-    //Vector to track filtering error
-    float y_err[AUDIO_BLOCK_SAMPLES];
-    for(i = 0; i < COEFFICIENT; i++) {
-        y_err[i] = 0.0;
-    }
-    //dot product -- real time system
-    for(i = 0; i < AUDIO_BLOCK_SAMPLES; i++) {
-        //Update most recent (current) value
-        xn[0] = input[AUDIO_BLOCK_SAMPLES - i];
-        //y_predict = np.dot(xn, coeff_p)
-        //y_predict_result.append(y_predict);
-        arm_dot_prod_f32(xn, coeff_p, COEFFICIENT, &y_predict_result[i]);
-        float e = y_predict_result[i] - (int16_t)reference[i]; 
-        int k;
-        for (k = 0; k < COEFFICIENT; k++){
-            coeff_p[k] = coeff_p[k] - mu * e * xn[k];
-        }
-        //xn[k] = np.roll(xn, 1);
-        for (k = COEFFICIENT - 1; k > 0; k--){
-            xn[k] = xn[k - 1];
-        }
-        y_err[i] = e;
-    }
-}
-
-int16_t* getResult(){
-    int i;
-    for (i = 0; i < AUDIO_BLOCK_SAMPLES; i++) {
-        y_predict_result_converted[i] = (int16_t) y_predict_result[i];
-    }
-    return y_predict_result_converted;
 }
