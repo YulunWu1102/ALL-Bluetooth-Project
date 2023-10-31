@@ -151,8 +151,6 @@ static struct {
 	} pres_comp;
 } ctrl_blk;
 
-static int8_t local_buf[BLOCK_SIZE_BYTES];
-
 static bool tone_active;
 /* Buffer which can hold max 1 period test tone at 100 Hz */
 static uint16_t test_tone_buf[CONFIG_AUDIO_SAMPLE_RATE_HZ / 100];
@@ -592,6 +590,7 @@ static void audio_datapath_i2s_blk_complete(uint32_t frame_start_ts, uint32_t *r
 					ctrl_blk.out.total_blk_underruns);
 			}
 
+			// Octet is just 8 bytes
 			tx_buf = (uint8_t *)&ctrl_blk.out
 					 .fifo[next_out_blk_idx * BLK_MONO_SIZE_OCTETS];
 
@@ -629,8 +628,12 @@ static void audio_datapath_i2s_blk_complete(uint32_t frame_start_ts, uint32_t *r
 	if (rx_buf_released != NULL) {
 		ret = data_fifo_block_lock(ctrl_blk.in.fifo, (void **)&rx_buf_released,
 					   BLOCK_SIZE_BYTES);
-		memcpy(local_buf, rx_buf_released, BLOCK_SIZE_BYTES);
 		ERR_CHK_MSG(ret, "Unable to lock block RX");
+
+		// This I2S in block is dual channel with identical data in L and R channel.
+		// Essentially a mono audio
+		//when a I2S block has been completed, we immediately push it to the buffer
+		pushBuffer((int8_t*)rx_buf_released);
 	}
 
 	/* Get new empty buffer to send to I2S HW */
@@ -670,11 +673,21 @@ static void audio_datapath_i2s_blk_complete(uint32_t frame_start_ts, uint32_t *r
 
 static void log_array(char* name, int16_t* data){
 	temp++;
-	if (temp == 1000){
+	if (temp == 100){
 		temp = 0;
-		LOG_WRN("%s: %d %d %d %d %d %d %d %d\n", name, data[0], data[1], data[2], data[3], data[4], data[5], data[6], data[7]);
+		LOG_WRN("%s: %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d (-32768: -1 to 32767: 1)\n", name, data[0], data[1], data[2], data[3], data[4], data[5], data[6], data[7], 
+			data[8], data[9], data[10], data[11], data[12], data[13], data[14], data[15]);
 	}
 }
+
+// static void log_array_int(char* name, int16_t* data){
+// 	log_counter0++;
+// 	if (log_counter0 % 1000 == 0){
+// 		log_counter0 = 0;
+// 		LOG_WRN("%s: %d %d %d %d %d %d %d %d ... [48]: %d %d %d %d %d %d %d %d\n", name, data[0], data[1], data[2], data[3], data[4], data[5], data[6], data[7],
+// 																 data[48], data[49], data[50], data[51], data[52], data[53], data[54], data[55]);
+// 	}
+// }
 
 static void audio_datapath_i2s_start(void)
 {
@@ -862,22 +875,21 @@ void audio_datapath_stream_out(const uint8_t *buf, size_t size, uint32_t sdu_ref
 	uint32_t out_blk_idx = ctrl_blk.out.prod_blk_idx;
 
 	int16_t *remote_blk = (int16_t*)ctrl_blk.decoded_data;
+	
+	filterFIR(remote_blk, remote_blk);
+	// log_array("output", (int16_t *)remote_blk);
+	log_array("err", getErrPtr());
+	
 
 	for (uint32_t i = 0; i < NUM_BLKS_IN_FRAME; i++) {
-		filterFIR((int16_t*)local_buf, remote_blk, remote_blk);
-		log_array("error", (int16_t *)getErrPtr());
 		memcpy(&ctrl_blk.out.fifo[out_blk_idx * BLK_STEREO_NUM_SAMPS],
-		       remote_blk, BLK_STEREO_SIZE_OCTETS);
-
-		// memcpy(&ctrl_blk.out.fifo[out_blk_idx * BLK_STEREO_NUM_SAMPS],
-		//        &((int16_t*)ctrl_blk.decoded_data)[i * BLK_STEREO_NUM_SAMPS],
-		// 	    BLK_STEREO_SIZE_OCTETS);
+		       &((int16_t*)ctrl_blk.decoded_data)[i * BLK_STEREO_NUM_SAMPS],
+			    BLK_STEREO_SIZE_OCTETS);
 
 		/* Record producer block start reference */
 		ctrl_blk.out.prod_blk_ts[out_blk_idx] = recv_frame_ts_us + (i * BLK_PERIOD_US);
 
 		out_blk_idx = NEXT_IDX(out_blk_idx);
-		remote_blk = &((int16_t*)ctrl_blk.decoded_data)[(i+1) * BLK_STEREO_NUM_SAMPS];
 	}
 
 	ctrl_blk.out.prod_blk_idx = out_blk_idx;
