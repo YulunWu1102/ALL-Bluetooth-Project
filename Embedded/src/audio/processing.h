@@ -4,11 +4,16 @@
 #include "arm_math.h"
 
 #define STEREO_BLOCK_BYTES 192
-#define Buffer_Size 15
+#define STEREO_BLOCK_SAMPLES (STEREO_BLOCK_BYTES/CONFIG_AUDIO_BIT_DEPTH_OCTETS)
+#define Buffer_Size 20
 
 typedef struct{
-    int8_t content[STEREO_BLOCK_BYTES*Buffer_Size];
-    int8_t blk_count;
+    int16_t data[STEREO_BLOCK_SAMPLES];
+} block_1ms_t;
+
+typedef struct{
+    block_1ms_t blocks[Buffer_Size];
+    size_t blk_count;
 } sync_buf;
 
 void InitBuffer();

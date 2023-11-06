@@ -2,7 +2,6 @@
 #include "arm_math.h"
 
 #define Blks_Per_Frame 10
-#define STEREO_BLOCK_SAMPLES (STEREO_BLOCK_BYTES/CONFIG_AUDIO_BIT_DEPTH_OCTETS)
 #define MONO_BLOCK_SAMPLES (STEREO_BLOCK_SAMPLES/2)
 
 #define COEFFICIENT 16
@@ -19,7 +18,7 @@ static sync_buf RX_buf;
 
 
 void InitBuffer() {
-    memset(RX_buf.content, 0, STEREO_BLOCK_BYTES*Buffer_Size);
+    memset( (void*) RX_buf.blocks, 0, sizeof(block_1ms_t)*Buffer_Size);
     RX_buf.blk_count = 0;
 }
 
@@ -28,8 +27,8 @@ void InitBuffer() {
 void pushBuffer(int8_t* block_ptr) {
     /* Shift contents in the buffer 1 block forward. Note that memcpy
        has undefined behavior when src and dest location overlaps */
-    memmove(RX_buf.content, &RX_buf.content[STEREO_BLOCK_BYTES], STEREO_BLOCK_BYTES * (Buffer_Size-1));
-    memcpy(&RX_buf.content[STEREO_BLOCK_BYTES * (Buffer_Size-1)], block_ptr, STEREO_BLOCK_BYTES);
+    memmove( (void*) &RX_buf.blocks[0], (void*) &RX_buf.blocks[1], sizeof(block_1ms_t) * (Buffer_Size-1));
+    memcpy( (void*) &RX_buf.blocks[Buffer_Size-1], block_ptr, sizeof(block_1ms_t));
     RX_buf.blk_count++;
     if (RX_buf.blk_count >= Buffer_Size){
         RX_buf.blk_count = Buffer_Size;
@@ -66,9 +65,10 @@ void filterBLK(int16_t* input, int16_t* reference, int16_t* output){
 
     arm_lms_q15(&lms_instance, input_mono, reference_mono, output_mono, errorArr, MONO_BLOCK_SAMPLES);
 
-    /* */
+    /* Moving data back to output buffer */
     for (i = 0; i < MONO_BLOCK_SAMPLES; i++){
-        output[2*i] = (int16_t)output_mono[i];
+        output[2*i] = (int16_t)input_mono[i];
+        // output[2*i + 1] = 0;
     }
 
 }
@@ -78,9 +78,9 @@ void filterFIR(int16_t* reference, int16_t* output){
     /* Skip processing if no enough blocks in the buffer, wait for next frame */
     if (RX_buf.blk_count >= Blks_Per_Frame){
         int blk; 
-        int startIdx = RX_buf.blk_count - Blks_Per_Frame;
+        int startIdx = Buffer_Size - RX_buf.blk_count;
         for (blk = 0; blk < Blks_Per_Frame; blk++){
-            filterBLK((int16_t*)&RX_buf.content[(startIdx + blk)*STEREO_BLOCK_BYTES], &reference[blk*STEREO_BLOCK_SAMPLES], &output[blk*STEREO_BLOCK_SAMPLES]);
+            filterBLK(RX_buf.blocks[startIdx + blk].data, &reference[blk*STEREO_BLOCK_SAMPLES], &output[blk*STEREO_BLOCK_SAMPLES]);
         }
         RX_buf.blk_count -= Blks_Per_Frame;
     }
@@ -96,7 +96,7 @@ void* getErrPtr(){
 }
 
 int16_t* getBuffer(){
-    return (int16_t*)&RX_buf.content[STEREO_BLOCK_BYTES * (Buffer_Size - RX_buf.blk_count)];
+    return RX_buf.blocks[Buffer_Size-RX_buf.blk_count].data;
 }
 
 void TestLibrary(uint8_t * decoded_input, uint8_t * processed_decoded_output, size_t decoded_data_length){

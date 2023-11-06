@@ -866,7 +866,7 @@ void audio_datapath_stream_out(const uint8_t *buf, size_t size, uint32_t sdu_ref
 
 	uint32_t out_blk_idx = ctrl_blk.out.prod_blk_idx;
 
-	int16_t *remote_blk = (int16_t*)ctrl_blk.decoded_data;
+	int16_t* remote_blk = (int16_t*)ctrl_blk.decoded_data;
 	
 	/* Using decoded remote blocks as reference, run LMS filter on local
 	   microphone input */
