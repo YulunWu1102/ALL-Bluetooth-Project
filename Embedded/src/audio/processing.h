@@ -4,7 +4,6 @@
 #include "arm_math.h"
 
 #define STEREO_BLOCK_BYTES 192
-#define Blks_Per_Frame 10
 #define Buffer_Size 15
 
 typedef struct{

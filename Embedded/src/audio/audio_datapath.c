@@ -630,9 +630,10 @@ static void audio_datapath_i2s_blk_complete(uint32_t frame_start_ts, uint32_t *r
 					   BLOCK_SIZE_BYTES);
 		ERR_CHK_MSG(ret, "Unable to lock block RX");
 
-		// This I2S in block is dual channel with identical data in L and R channel.
-		// Essentially a mono audio
-		//when a I2S block has been completed, we immediately push it to the buffer
+		/* This rx block has dual channels with identical data in L and R channel.
+	 	   Essentially a mono audio
+		   when a local mic block has been sampled, we store it in a buffer so we can later 
+		   use the buffer to process a larger reference block */
 		pushBuffer((int8_t*)rx_buf_released);
 	}
 
@@ -679,15 +680,6 @@ static void log_array(char* name, int16_t* data){
 			data[8], data[9], data[10], data[11], data[12], data[13], data[14], data[15]);
 	}
 }
-
-// static void log_array_int(char* name, int16_t* data){
-// 	log_counter0++;
-// 	if (log_counter0 % 1000 == 0){
-// 		log_counter0 = 0;
-// 		LOG_WRN("%s: %d %d %d %d %d %d %d %d ... [48]: %d %d %d %d %d %d %d %d\n", name, data[0], data[1], data[2], data[3], data[4], data[5], data[6], data[7],
-// 																 data[48], data[49], data[50], data[51], data[52], data[53], data[54], data[55]);
-// 	}
-// }
 
 static void audio_datapath_i2s_start(void)
 {
@@ -876,9 +868,10 @@ void audio_datapath_stream_out(const uint8_t *buf, size_t size, uint32_t sdu_ref
 
 	int16_t *remote_blk = (int16_t*)ctrl_blk.decoded_data;
 	
+	/* Using decoded remote blocks as reference, run LMS filter on local
+	   microphone input */
 	filterFIR(remote_blk, remote_blk);
-	// log_array("output", (int16_t *)remote_blk);
-	log_array("err", getErrPtr());
+	log_array("coeff", getCoeffPtr());
 	
 
 	for (uint32_t i = 0; i < NUM_BLKS_IN_FRAME; i++) {
