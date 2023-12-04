@@ -871,7 +871,7 @@ void audio_datapath_stream_out(const uint8_t *buf, size_t size, uint32_t sdu_ref
 	/* Using decoded remote blocks as reference, run LMS filter on local
 	   microphone input */
 	filterFIR(remote_blk, remote_blk);
-	log_array("coeff", getCoeffPtr());
+	// log_array("coeff", getCoeffPtr());
 	
 
 	for (uint32_t i = 0; i < NUM_BLKS_IN_FRAME; i++) {
