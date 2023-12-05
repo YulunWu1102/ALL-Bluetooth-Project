@@ -72,11 +72,11 @@ void InitFIRFilter(){
 
 
 /* Perform ten blocks LMS with the given reference blocks. Input blocks are taken from MIC_buf */
-void filterFIR(int16_t* BLE_frame_stereo, int16_t* output){
-    
+void filterFIR(int16_t* BLE_frame_stereo, int16_t* output, uint32_t pres_delay){
+    uint32_t delay = 13 + pres_delay/1000;
 
     /* Check if enough samples in buffer for LMS*/
-    if (MIC_buf.blk_count >= Blks_Per_Frame){
+    if (MIC_buf.blk_count >= Blks_Per_Frame + delay){
         int startIdx = Buffer_Size - MIC_buf.blk_count;
 
         

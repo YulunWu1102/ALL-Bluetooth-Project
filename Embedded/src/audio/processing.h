@@ -5,7 +5,7 @@
 
 #define STEREO_BLOCK_BYTES 192
 #define STEREO_BLOCK_SAMPLES (STEREO_BLOCK_BYTES/CONFIG_AUDIO_BIT_DEPTH_OCTETS)
-#define Buffer_Size 50
+#define Buffer_Size 40
 
 typedef struct{
     int16_t data[STEREO_BLOCK_SAMPLES];
@@ -22,7 +22,7 @@ int16_t* getBuffer();
 
 void TestLibrary(uint8_t * decoded_input, uint8_t * processed_decoded_output, size_t decoded_data_length);
 void InitFIRFilter();
-void filterFIR(int16_t* reference, int16_t* output);
+void filterFIR(int16_t* reference, int16_t* output, int pres_delay);
 void* getCoeffPtr();
 void* getErrPtr();
 
