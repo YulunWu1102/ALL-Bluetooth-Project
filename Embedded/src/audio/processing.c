@@ -6,7 +6,7 @@
 #define Blks_Per_Frame 10
 #define MONO_BLOCK_SAMPLES (STEREO_BLOCK_SAMPLES/2)
 
-#define COEFFICIENT 12
+#define COEFFICIENT 6
 #define Coeff_size COEFFICIENT
 
 
@@ -16,35 +16,43 @@ static q15_t error_arr[Coeff_size];
 static q15_t learningRate[Coeff_size];
 q15_t buffer_temp[Coeff_size-1 + Coeff_size];
 q15_t audio_matrix[Coeff_size][Coeff_size];
-q15_t reference_mono[MONO_BLOCK_SAMPLES * Blks_Per_Frame];
-static q63_t one;
+q15_t BLE_mono[MONO_BLOCK_SAMPLES * Blks_Per_Frame];
+q15_t Mic_mono[MONO_BLOCK_SAMPLES * Blks_Per_Frame];
+q15_t BLE_mono_result[MONO_BLOCK_SAMPLES * Blks_Per_Frame];
+static q63_t saturate;
+static q15_t limit;
 
-void LMS_stream(q15_t* input, q15_t* reference);
-void LMS_overlap_add(q15_t* input_buffer, q15_t* reference_buffer);
+static int counter = 0;
+
+void LMS_stream(q15_t* input, q15_t* reference, q15_t* output);
+void LMS_overlap_add(q15_t* input_buffer, q15_t* reference_buffer, q15_t* output_buffer);
 void fill_matrix(q15_t* audio_buffer, q15_t allocated_matrix[Coeff_size][Coeff_size]);
 void update_LMS_coeff(q15_t result[Coeff_size], q15_t input[Coeff_size][Coeff_size], q15_t reference[Coeff_size]);
+void printData(int16_t* input, int16_t* reference, int16_t* result);
+
+q15_t q63_to_q15(q63_t data);
 
 LOG_MODULE_REGISTER(processing, 7);
 
 /* local microphone samples buffer for lms block processing */
-static sync_buf RX_buf;
+static sync_buf MIC_buf;
 
 
 void InitBuffer() {
-    memset( (void*) RX_buf.blocks, 0, sizeof(block_1ms_t)*Buffer_Size);
-    RX_buf.blk_count = 0;
+    memset( (void*) MIC_buf.blocks, 0, sizeof(block_1ms_t)*Buffer_Size);
+    MIC_buf.blk_count = 0;
 }
 
-/* Pushes a block of stereo data to the end of RX_buf buffer. Discard oldest block
+/* Pushes a block of stereo data to the end of MIC_buf buffer. Discard oldest block
    when the buffer is full */
 void pushBuffer(int8_t* block_ptr) {
     /* Shift contents in the buffer 1 block forward. Note that memcpy
        has undefined behavior when src and dest location overlaps */
-    memmove( (void*) &RX_buf.blocks[0], (void*) &RX_buf.blocks[1], sizeof(block_1ms_t) * (Buffer_Size-1));
-    memcpy( (void*) &RX_buf.blocks[Buffer_Size-1], block_ptr, sizeof(block_1ms_t));
-    RX_buf.blk_count++;
-    if (RX_buf.blk_count >= Buffer_Size){
-        RX_buf.blk_count = Buffer_Size;
+    memmove( (void*) &MIC_buf.blocks[0], (void*) &MIC_buf.blocks[1], sizeof(block_1ms_t) * (Buffer_Size-1));
+    memcpy( (void*) &MIC_buf.blocks[Buffer_Size-1], block_ptr, sizeof(block_1ms_t));
+    MIC_buf.blk_count++;
+    if (MIC_buf.blk_count >= Buffer_Size){
+        MIC_buf.blk_count = Buffer_Size;
     }
 }
 
@@ -62,40 +70,47 @@ void InitFIRFilter(){
         lr[i] = 0.0001;
     }
     arm_float_to_q15(lr, learningRate, Coeff_size);
+
+    saturate = (q63_t)(0xFFFF << 15);
+    limit = (q15_t)65535;
 }
 
 
-/* Perform ten blocks LMS with the given reference blocks. Input blocks are taken from RX_buf */
-void filterFIR(int16_t* reference, int16_t* output){
+/* Perform ten blocks LMS with the given reference blocks. Input blocks are taken from MIC_buf */
+void filterFIR(int16_t* BLE_frame_stereo, int16_t* output){
     /* Check if enough samples in buffer for LMS*/
-    if (RX_buf.blk_count >= Blks_Per_Frame){
-        int startIdx = Buffer_Size - RX_buf.blk_count;
+    if (MIC_buf.blk_count >= Blks_Per_Frame){
+        int startIdx = Buffer_Size - MIC_buf.blk_count;
 
+        
         int i;
         for (i = 0; i < MONO_BLOCK_SAMPLES * Blks_Per_Frame; i++){
-            reference_mono[i] = (q15_t) reference[2*i];
+            BLE_mono[i] = (q15_t) BLE_frame_stereo[2*i];
+            Mic_mono[i] = (q15_t) *(MIC_buf.blocks[startIdx].data + 2*i);
         }
 
-        LMS_stream((q15_t *)RX_buf.blocks[startIdx].data, reference_mono);
-        RX_buf.blk_count -= Blks_Per_Frame; 
+        LMS_stream((q15_t *)MIC_buf.blocks[startIdx].data, BLE_mono, BLE_mono_result);
+        for (i = 0; i < MONO_BLOCK_SAMPLES * Blks_Per_Frame; i++){
+            output[i*2] = (int16_t) BLE_mono_result[i];
+        }
+        MIC_buf.blk_count -= Blks_Per_Frame; 
     }
 }
 
-void LMS_stream(q15_t* input, q15_t* reference){
+void LMS_stream(q15_t* input, q15_t* reference, q15_t* output){
     // LOG_WRN("Dividing BLE frame to LMS coefficient size chunks");
     int blk_count = STEREO_BLOCK_SAMPLES * Blks_Per_Frame / Coeff_size;
     int i;
     for (i = 0; i < blk_count; i++){
-        LMS_overlap_add(&input[Coeff_size * i], &reference[Coeff_size * i]);
+        LMS_overlap_add(&input[Coeff_size * i], &reference[Coeff_size * i], &output[Coeff_size * i]);
     }
 }
 
-void LMS_overlap_add(q15_t* input_buffer, q15_t* reference_buffer){
+void LMS_overlap_add(q15_t* input_buffer, q15_t* reference_buffer, q15_t* output_buffer){
     // LOG_WRN("Entering filtering function");
     
     memcpy(buffer_temp, prev_audio_buffer, sizeof(q15_t)*(Coeff_size-1));
     memcpy(&buffer_temp[Coeff_size-1], input_buffer, sizeof(q15_t)*Coeff_size);
-
     
     fill_matrix(buffer_temp, audio_matrix);
 
@@ -105,11 +120,15 @@ void LMS_overlap_add(q15_t* input_buffer, q15_t* reference_buffer){
         q63_t temp;
         q15_t result;
         arm_dot_prod_q15(audio_matrix[i], coeff_arr, Coeff_size, &temp);
-        result = (q15_t)(temp & 0xFFFF);
-        input_buffer[i] = result;
+        result = (q15_t) (temp >> 15) & 0x7FFF;
+        result |= (q15_t) (temp >> 63) << 15;
+        output_buffer[i] = result;
     }
 
-    update_LMS_coeff(input_buffer, audio_matrix, reference_buffer);    
+    // printData(input_buffer, reference_buffer, (int16_t *)output_buffer);
+
+    update_LMS_coeff(output_buffer, audio_matrix, reference_buffer);  
+    memcpy(prev_audio_buffer, output_buffer + 1, sizeof(q15_t)*(Coeff_size-1));  
 }
 
 void fill_matrix(q15_t* audio_buffer, q15_t allocated_matrix[Coeff_size][Coeff_size]){
@@ -130,7 +149,8 @@ void update_LMS_coeff(q15_t result[Coeff_size], q15_t input[Coeff_size][Coeff_si
         q63_t temp;
         q15_t result;
         arm_dot_prod_q15(input[i], error_arr, Coeff_size, &temp);
-        result = (q15_t)(temp & 0xFFFF);
+        result = (q15_t) (temp >> 15) & 0x7FFF;
+        result |= (q15_t) (temp >> 63) << 15;
         step[i] = result;
     }
 
@@ -139,7 +159,16 @@ void update_LMS_coeff(q15_t result[Coeff_size], q15_t input[Coeff_size][Coeff_si
     arm_add_q15(coeff_arr, delta, coeff_arr, Coeff_size);
 }
 
-
+void printData(int16_t* input, int16_t* reference, int16_t* result){
+    counter++;
+    if (counter == 8000){
+        LOG_WRN("input: %d %d %d %d \n ref: %d %d %d %d \n output: %d %d %d %d", 
+        input[0], input[1], input[2], input[3],
+        reference[0], reference[1], reference[2], reference[3],
+        result[0], result[1], result[2], result[3]);
+        counter = 0;
+    }
+}
 
 
 
@@ -153,7 +182,7 @@ void update_LMS_coeff(q15_t result[Coeff_size], q15_t input[Coeff_size][Coeff_si
 // }
 
 int16_t* getBuffer(){
-    return RX_buf.blocks[Buffer_Size-RX_buf.blk_count].data;
+    return MIC_buf.blocks[Buffer_Size-MIC_buf.blk_count].data;
 }
 
 void TestLibrary(uint8_t * decoded_input, uint8_t * processed_decoded_output, size_t decoded_data_length){
@@ -179,6 +208,10 @@ void transposeMatrix(float* src, float* dst, int srcRows, int srcCols) {
             dst[j * srcRows + i] = src[i * srcCols + j];
         }
     }
+}
+
+q15_t q63_to_q15(q63_t data){
+    
 }
 
 
@@ -240,19 +273,19 @@ void transposeMatrix(float* src, float* dst, int srcRows, int srcCols) {
 //     }
 // }
 
-// /* Perform ten blocks LMS with the given reference blocks. Input blocks are taken from RX_buf */
+// /* Perform ten blocks LMS with the given reference blocks. Input blocks are taken from MIC_buf */
 // void filterFIR(int16_t* reference, int16_t* output){
 //     // /* Skip processing if no enough blocks in the buffer, wait for next frame */
-//     // if (RX_buf.blk_count >= Blks_Per_Frame){
+//     // if (MIC_buf.blk_count >= Blks_Per_Frame){
 //     //     int blk; 
-//     //     int startIdx = Buffer_Size - RX_buf.blk_count;
+//     //     int startIdx = Buffer_Size - MIC_buf.blk_count;
 //     //     for (blk = 0; blk < Blks_Per_Frame; blk++){
-//     //         filterBLK(RX_buf.blocks[startIdx + blk].data, &reference[blk*STEREO_BLOCK_SAMPLES], &output[blk*STEREO_BLOCK_SAMPLES]);
+//     //         filterBLK(MIC_buf.blocks[startIdx + blk].data, &reference[blk*STEREO_BLOCK_SAMPLES], &output[blk*STEREO_BLOCK_SAMPLES]);
 //     //     }
-//     //     RX_buf.blk_count -= Blks_Per_Frame;
+//     //     MIC_buf.blk_count -= Blks_Per_Frame;
 //     // }
 
-//     LMS_overlap_add(RX_buf.blocks, reference);
+//     LMS_overlap_add(MIC_buf.blocks, reference);
 
 // }
 
