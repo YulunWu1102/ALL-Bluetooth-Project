@@ -5,7 +5,7 @@
 
 #define STEREO_BLOCK_BYTES 192
 #define STEREO_BLOCK_SAMPLES (STEREO_BLOCK_BYTES/CONFIG_AUDIO_BIT_DEPTH_OCTETS)
-#define Buffer_Size 20
+#define Buffer_Size 50
 
 typedef struct{
     int16_t data[STEREO_BLOCK_SAMPLES];

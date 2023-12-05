@@ -19,8 +19,6 @@ q15_t audio_matrix[Coeff_size][Coeff_size];
 q15_t BLE_mono[MONO_BLOCK_SAMPLES * Blks_Per_Frame];
 q15_t Mic_mono[MONO_BLOCK_SAMPLES * Blks_Per_Frame];
 q15_t BLE_mono_result[MONO_BLOCK_SAMPLES * Blks_Per_Frame];
-static q63_t saturate;
-static q15_t limit;
 
 static int counter = 0;
 
@@ -70,14 +68,13 @@ void InitFIRFilter(){
         lr[i] = 0.0001;
     }
     arm_float_to_q15(lr, learningRate, Coeff_size);
-
-    saturate = (q63_t)(0xFFFF << 15);
-    limit = (q15_t)65535;
 }
 
 
 /* Perform ten blocks LMS with the given reference blocks. Input blocks are taken from MIC_buf */
 void filterFIR(int16_t* BLE_frame_stereo, int16_t* output){
+    
+
     /* Check if enough samples in buffer for LMS*/
     if (MIC_buf.blk_count >= Blks_Per_Frame){
         int startIdx = Buffer_Size - MIC_buf.blk_count;
@@ -114,16 +111,20 @@ void LMS_overlap_add(q15_t* input_buffer, q15_t* reference_buffer, q15_t* output
     
     fill_matrix(buffer_temp, audio_matrix);
 
-    int i;
-    for (i = 0; i < Coeff_size; i++)
-    {
-        q63_t temp;
-        q15_t result;
-        arm_dot_prod_q15(audio_matrix[i], coeff_arr, Coeff_size, &temp);
-        result = (q15_t) (temp >> 15) & 0x7FFF;
-        result |= (q15_t) (temp >> 63) << 15;
-        output_buffer[i] = result;
-    }
+    arm_matrix_instance_q15 matrixA;
+    arm_mat_init_q15(&matrixA, Coeff_size, Coeff_size, audio_matrix);
+    arm_mat_vec_mult_q15(&matrixA, coeff_arr, output_buffer);
+    
+    // int i;
+    // for (i = 0; i < Coeff_size; i++)
+    // {
+    //     q63_t temp;
+    //     q15_t result;
+    //     arm_dot_prod_q15(audio_matrix[i], coeff_arr, Coeff_size, &temp);
+    //     result = (q15_t) (temp >> 15) & 0x7FFF;
+    //     result |= (q15_t) (temp >> 63) << 15;
+    //     output_buffer[i] = result;
+    // }
 
     // printData(input_buffer, reference_buffer, (int16_t *)output_buffer);
 
@@ -145,14 +146,20 @@ void update_LMS_coeff(q15_t result[Coeff_size], q15_t input[Coeff_size][Coeff_si
     }
 
     q15_t step[Coeff_size];
-    for(i = 0; i < Coeff_size; i++){
-        q63_t temp;
-        q15_t result;
-        arm_dot_prod_q15(input[i], error_arr, Coeff_size, &temp);
-        result = (q15_t) (temp >> 15) & 0x7FFF;
-        result |= (q15_t) (temp >> 63) << 15;
-        step[i] = result;
-    }
+
+    arm_matrix_instance_q15 matrixA;
+    arm_mat_init_q15(&matrixA, Coeff_size, Coeff_size, input);
+    arm_mat_vec_mult_q15(&matrixA, error_arr, step);
+
+    
+    // for(i = 0; i < Coeff_size; i++){
+    //     q63_t temp;
+    //     q15_t result;
+    //     arm_dot_prod_q15(input[i], error_arr, Coeff_size, &temp);
+    //     result = (q15_t) (temp >> 15) & 0x7FFF;
+    //     result |= (q15_t) (temp >> 63) << 15;
+    //     step[i] = result;
+    // }
 
     q15_t delta[Coeff_size];
     arm_mult_q15(learningRate, step, delta, Coeff_size);
